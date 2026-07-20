@@ -188,7 +188,7 @@ export default function HomePage() {
             <div className="w-full lg:w-[52%]">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-brand-border shadow-md transition-all duration-300 hover:border-brand-primary/15">
                 <Image
-                  src="/teachers-collaborating.png"
+                  src="/teachers-collaborating-indian.png"
                   alt="SATIC Professional Teachers Collaborating"
                   fill
                   className="object-cover object-center"
