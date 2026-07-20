@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS payments (
   razorpay_order_id   TEXT,
   razorpay_payment_id TEXT,
   razorpay_signature  TEXT,
-  amount              INTEGER NOT NULL DEFAULT 49900,  -- Amount in paise (₹499 = 49900 paise)
+  amount              INTEGER NOT NULL DEFAULT 89900,  -- Amount in paise (₹899 = 89900 paise)
   currency            TEXT NOT NULL DEFAULT 'INR',
   status              TEXT NOT NULL DEFAULT 'created', -- 'created' | 'paid' | 'failed'
   payment_method      TEXT,                            -- 'upi' | 'card' | 'netbanking'
@@ -69,6 +69,21 @@ CREATE TABLE IF NOT EXISTS batches (
   created_at   TIMESTAMPTZ DEFAULT NOW()
 );
 
+-- 5. SCHOOL_ENQUIRIES TABLE
+-- Stores B2B institutional school inquiries
+CREATE TABLE IF NOT EXISTS school_enquiries (
+  id           UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  full_name    TEXT NOT NULL,
+  job_title    TEXT NOT NULL,
+  school_name  TEXT NOT NULL,
+  mobile       TEXT NOT NULL,
+  email        TEXT NOT NULL,
+  num_teachers INTEGER,
+  status       TEXT NOT NULL DEFAULT 'new', -- 'new' | 'contacted' | 'closed'
+  created_at   TIMESTAMPTZ DEFAULT NOW()
+);
+
+
 -- ================================================
 -- ROW LEVEL SECURITY (RLS) — Enable per table
 -- This ensures members can only read their own data
@@ -78,6 +93,7 @@ ALTER TABLE members  ENABLE ROW LEVEL SECURITY;
 ALTER TABLE payments ENABLE ROW LEVEL SECURITY;
 ALTER TABLE sessions ENABLE ROW LEVEL SECURITY;
 ALTER TABLE batches  ENABLE ROW LEVEL SECURITY;
+ALTER TABLE school_enquiries ENABLE ROW LEVEL SECURITY;
 
 -- POLICIES — Members table
 CREATE POLICY "Allow insert for all" ON members
@@ -100,6 +116,14 @@ CREATE POLICY "Sessions are publicly readable" ON sessions
 -- POLICIES — Batches table (public readable)
 CREATE POLICY "Batches are publicly readable" ON batches
   FOR SELECT USING (TRUE);
+
+-- POLICIES — School Enquiries table
+CREATE POLICY "Allow insert for all" ON school_enquiries
+  FOR INSERT WITH CHECK (TRUE);
+
+CREATE POLICY "Allow select own enquiries" ON school_enquiries
+  FOR SELECT USING (TRUE);
+
 
 -- ================================================
 -- UPDATED_AT TRIGGER

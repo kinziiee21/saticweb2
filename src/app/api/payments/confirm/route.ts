@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
         razorpay_order_id:   orderId   || null,
         razorpay_payment_id: paymentId || `sim_${Date.now()}`,
         razorpay_signature:  signature || null,
-        amount:              49900, // ₹499 in paise
+        amount:              89900, // ₹899 in paise
         currency:            "INR",
         status:              "paid",
         payment_method:      method || "upi",

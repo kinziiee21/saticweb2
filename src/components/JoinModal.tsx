@@ -345,7 +345,7 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
                     <h3 className="text-lg font-bold text-satic-navy mt-2">SATIC Club Membership</h3>
                   </div>
                   <div className="text-right">
-                    <span className="text-2xl font-extrabold text-satic-navy font-display">₹499</span>
+                    <span className="text-2xl font-extrabold text-satic-navy font-display">₹899</span>
                     <span className="text-satic-charcoal/60 text-xs block">/ year</span>
                   </div>
                 </div>
@@ -370,7 +370,7 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
 
               <div className="bg-satic-blue/5 border border-satic-blue/10 rounded-lg p-3.5 mb-6 flex items-start space-x-2.5 text-xs text-satic-navy/80 font-body">
                 <ShieldCheck size={18} className="text-satic-blue shrink-0 mt-0.5" />
-                <p>By proceeding, you secure immediate access to the entire platform. Annual fee is billed once and fully secure. Under ₹1.40 per day.</p>
+                <p>By proceeding, you secure immediate access to the entire platform. Annual fee is billed once and fully secure. Under ₹3 per day.</p>
               </div>
 
               <div className="flex justify-between items-center">
@@ -412,7 +412,7 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
                     </div>
                   </div>
                   <div className="text-right font-display">
-                    <span className="text-sm font-bold block">₹499.00</span>
+                    <span className="text-sm font-bold block">₹899.00</span>
                     <span className="text-[9px] text-white/70 font-mono font-body">{formData.email}</span>
                   </div>
                 </div>
@@ -549,7 +549,7 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
                     ) : (
                       <>
                         <ShieldCheck size={16} />
-                        <span>PAY ₹499.00 SECURELY</span>
+                        <span>PAY ₹899.00 SECURELY</span>
                       </>
                     )}
                   </button>
@@ -584,7 +584,7 @@ export default function JoinModal({ isOpen, onClose }: JoinModalProps) {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-satic-charcoal/60">Amount Paid:</span>
-                  <span className="font-bold text-satic-navy">₹499.00</span>
+                  <span className="font-bold text-satic-navy">₹899.00</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-satic-charcoal/60">Valid Until:</span>

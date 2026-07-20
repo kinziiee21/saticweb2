@@ -70,7 +70,7 @@ export function WelcomeEmailHtml({
                       </tr>
                       <tr>
                         <td style="padding:6px 0;color:#777;font-size:13px;">Amount Paid</td>
-                        <td style="padding:6px 0;color:#2D2D2D;font-size:13px;font-weight:700;">₹499</td>
+                        <td style="padding:6px 0;color:#2D2D2D;font-size:13px;font-weight:700;">₹899</td>
                       </tr>
                       <tr>
                         <td style="padding:6px 0;color:#777;font-size:13px;">Valid Until</td>
