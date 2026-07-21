@@ -158,7 +158,7 @@ export default function HomePage() {
       </header>
 
       {/* HERO */}
-      <section className="hero-mesh relative px-6 pt-10 pb-12 md:pt-16 md:pb-20 lg:pt-24 lg:pb-24 overflow-hidden border-b border-brand-border">
+      <section className="hero-mesh relative px-6 pt-6 pb-12 md:pt-10 md:pb-20 lg:pt-14 lg:pb-24 overflow-hidden border-b border-brand-border">
 
         {/* Decorative floating orbs */}
         <div className="orb-float-slow pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-brand-primary/5 blur-3xl" />
@@ -202,7 +202,7 @@ export default function HomePage() {
               </p>
 
               {/* Stats Block */}
-              <div className="fade-up-4 grid grid-cols-2 gap-6 py-5 border-y border-brand-border/60 max-w-xs">
+              <div className="fade-up-4 grid grid-cols-2 gap-12 py-5 border-y border-brand-border/60 max-w-sm">
                 <div className="stat-pop">
                   <span className="text-4xl md:text-5xl font-black text-brand-primary block leading-none mb-1 font-display tabular-nums">
                     {teacherCount >= 1000 ? "1,000" : teacherCount.toLocaleString()}+
