@@ -389,25 +389,29 @@ export default function HomePage() {
       </section>
 
       {/* 04 — 10-MINUTE PRACTICE */}
-      <section id="practice" className="px-6 py-16 md:py-24 bg-[#FAF9F6]/40 border-b border-brand-border">
-        <div className="mx-auto max-w-7xl">
+      <section id="practice" className="px-6 py-20 md:py-28 bg-brand-primary text-white border-b border-brand-border relative overflow-hidden">
+        {/* Subtle background decorative shapes */}
+        <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
+        <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
+
+        <div className="mx-auto max-w-7xl relative z-10">
           <div className="max-w-3xl mb-16 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-primary font-display">10-Minute Practice</span>
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-primary/65 block font-display">MONDAY–FRIDAY</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-secondary font-display">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-accent font-display">10-Minute Practice</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-white/70 block font-display">MONDAY–FRIDAY</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white font-display">
               10 Minutes. One Practical Step Forward.
             </h2>
-            <p className="text-base md:text-lg text-brand-text/80 leading-relaxed font-body font-medium">
+            <p className="text-base md:text-lg text-white/90 leading-relaxed font-body font-medium">
               Professional development designed to fit into a teacher's real working day.
             </p>
-            <p className="text-sm md:text-base text-brand-text/70 leading-relaxed font-body">
+            <p className="text-sm md:text-base text-white/80 leading-relaxed font-body">
               Teachers receive a short professional practice activity, complete it when convenient and continue building practical professional skills—one small step at a time.
             </p>
           </div>
 
           {/* How It Works List */}
-          <div className="bg-white border border-brand-border rounded-3xl p-6 md:p-8 shadow-xs mb-16">
-            <h3 className="text-lg font-bold text-brand-secondary uppercase tracking-wider mb-6 font-display">How It Works</h3>
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 shadow-xl mb-16">
+            <h3 className="text-lg font-bold text-white uppercase tracking-wider mb-6 font-display">How It Works</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { step: "01", title: "Receive", desc: "Get your practice activity." },
@@ -417,11 +421,11 @@ export default function HomePage() {
                 { step: "05", title: "Earn Points", desc: "Build your Practice Points." },
                 { step: "06", title: "Track Progress", desc: "See your professional growth over time." }
               ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-start p-4 rounded-xl hover:bg-brand-bg/40 transition-premium">
+                <div key={i} className="flex gap-4 items-start p-4 rounded-xl hover:bg-white/10 transition-premium">
                   <span className="text-2xl font-black text-brand-accent font-display leading-none mt-1">{item.step}</span>
                   <div className="font-body">
-                    <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{item.title}</h4>
-                    <p className="text-sm md:text-base text-brand-text/75 leading-relaxed mt-0.5">{item.desc}</p>
+                    <h4 className="font-bold text-white text-sm md:text-base font-display">{item.title}</h4>
+                    <p className="text-sm md:text-base text-white/80 leading-relaxed mt-0.5">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -430,7 +434,7 @@ export default function HomePage() {
 
           {/* What Can Teachers Practise Section */}
           <div className="mb-16">
-            <h3 className="text-xl font-bold text-brand-secondary font-display text-center mb-8">What Can Teachers Practise?</h3>
+            <h3 className="text-2xl font-bold text-white font-display text-center mb-8">What Can Teachers Practise?</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { title: "AI Tools Practice", desc: "Use AI tools for lesson planning, content creation and everyday professional tasks.", icon: Sparkles },
@@ -442,13 +446,13 @@ export default function HomePage() {
               ].map((item, i) => {
                 const Icon = item.icon;
                 return (
-                  <div key={i} className="bg-white border border-brand-border rounded-xl p-5 md:p-6 shadow-xs flex gap-4 items-start">
-                    <div className="rounded-lg bg-brand-bg p-2 text-brand-primary shrink-0">
+                  <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-5 md:p-6 shadow-md flex gap-4 items-start hover:bg-white/10 hover:-translate-y-1 transition-premium">
+                    <div className="rounded-lg bg-white/15 p-2 text-white shrink-0">
                       <Icon size={18} />
                     </div>
                     <div className="font-body">
-                      <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{item.title}</h4>
-                      <p className="text-sm md:text-base text-brand-text/75 leading-relaxed mt-1">{item.desc}</p>
+                      <h4 className="font-bold text-white text-sm md:text-base font-display">{item.title}</h4>
+                      <p className="text-sm md:text-base text-white/80 leading-relaxed mt-1">{item.desc}</p>
                     </div>
                   </div>
                 );
@@ -458,18 +462,18 @@ export default function HomePage() {
 
           {/* Testimonials */}
           <div>
-            <h3 className="text-xl font-bold text-brand-secondary font-display text-center mb-8">What Teachers Say</h3>
+            <h3 className="text-2xl font-bold text-white font-display text-center mb-8">What Teachers Say</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { quote: "The daily 10-minute activities are incredibly practical. I can complete them during my free period, and the feedback from mentors helps me refine my teaching methods immediately.", name: "Meera Sen", school: "Middle School Science Teacher, Delhi Public School" },
                 { quote: "SATIC CPD has transformed how I plan my lessons. Learning to use AI tools step-by-step has saved me hours of administrative work every week.", name: "Rajesh Nair", school: "Secondary Math Teacher, Chinmaya Vidyalaya" },
                 { quote: "It's the first professional development program that doesn't feel like a chore. The bite-sized daily practices fit perfectly into my busy schedule.", name: "Kavita Rao", school: "English Teacher, Bishop Cotton School" }
               ].map((t, i) => (
-                <div key={i} className="bg-white border border-brand-border rounded-2xl p-6 shadow-xs flex flex-col justify-between">
-                  <p className="text-sm md:text-base text-brand-text/80 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
+                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-md flex flex-col justify-between hover:bg-white/10 transition-premium">
+                  <p className="text-sm md:text-base text-white/85 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
                   <div>
-                    <h5 className="font-bold text-brand-secondary text-xs md:text-sm font-display">{t.name}</h5>
-                    <span className="text-xs text-brand-text/50 block font-body">{t.school}</span>
+                    <h5 className="font-bold text-white text-xs md:text-sm font-display">{t.name}</h5>
+                    <span className="text-xs text-white/60 block font-body">{t.school}</span>
                   </div>
                 </div>
               ))}
