@@ -421,7 +421,7 @@ export default function HomePage() {
                 { step: "05", title: "Earn Points", desc: "Build your Practice Points." },
                 { step: "06", title: "Track Progress", desc: "See your professional growth over time." }
               ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-start p-5 bg-white text-brand-text border border-brand-border/60 rounded-2xl shadow-sm hover:scale-[1.02] transition-premium">
+                <div key={i} className="flex gap-4 items-start p-5 bg-brand-bg text-brand-text border border-brand-border/60 rounded-2xl shadow-sm hover:scale-[1.02] transition-premium">
                   <span className="text-2xl font-black text-brand-primary font-display leading-none mt-1">{item.step}</span>
                   <div className="font-body">
                     <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{item.title}</h4>
@@ -446,7 +446,7 @@ export default function HomePage() {
               ].map((item, i) => {
                 const Icon = item.icon;
                 return (
-                  <div key={i} className="bg-white border border-brand-border/60 rounded-xl p-5 md:p-6 shadow-sm flex gap-4 items-start hover:-translate-y-1 hover:shadow-md transition-premium text-brand-text">
+                  <div key={i} className="bg-brand-bg border border-brand-border/60 rounded-xl p-5 md:p-6 shadow-sm flex gap-4 items-start hover:-translate-y-1 hover:shadow-md transition-premium text-brand-text">
                     <div className="rounded-lg bg-brand-primary/10 text-brand-primary p-2 shrink-0">
                       <Icon size={18} />
                     </div>
@@ -469,7 +469,7 @@ export default function HomePage() {
                 { quote: "SATIC CPD has transformed how I plan my lessons. Learning to use AI tools step-by-step has saved me hours of administrative work every week.", name: "Rajesh Nair", school: "Secondary Math Teacher, Chinmaya Vidyalaya" },
                 { quote: "It's the first professional development program that doesn't feel like a chore. The bite-sized daily practices fit perfectly into my busy schedule.", name: "Kavita Rao", school: "English Teacher, Bishop Cotton School" }
               ].map((t, i) => (
-                <div key={i} className="bg-white border border-brand-border/60 rounded-2xl p-6 shadow-sm flex flex-col justify-between hover:-translate-y-1 hover:shadow-md transition-premium text-brand-text">
+                <div key={i} className="bg-brand-bg border border-brand-border/60 rounded-2xl p-6 shadow-sm flex flex-col justify-between hover:-translate-y-1 hover:shadow-md transition-premium text-brand-text">
                   <p className="text-sm md:text-base text-brand-text/80 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
                   <div>
                     <h5 className="font-bold text-brand-secondary text-xs md:text-sm font-display">{t.name}</h5>
