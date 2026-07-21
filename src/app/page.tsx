@@ -174,16 +174,8 @@ export default function HomePage() {
             {/* ── Left Column ── */}
             <div className="w-full lg:w-[48%] flex flex-col justify-center space-y-7">
 
-              {/* Trust badge */}
-              <div className="fade-up-1">
-                <span className="inline-flex items-center gap-2 bg-brand-primary/8 border border-brand-primary/15 text-brand-primary text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full font-display">
-                  <Sparkles size={12} className="text-brand-accent" />
-                  Trusted by 1,000+ Teachers Across India
-                </span>
-              </div>
-
               {/* Headline */}
-              <div className="fade-up-2 space-y-1">
+              <div className="fade-up-1 space-y-1">
                 <p className="text-xs md:text-sm font-bold tracking-widest text-brand-primary/70 uppercase font-display">
                   SATIC — THE TEACHERS' CLUB
                 </p>
