@@ -312,7 +312,7 @@ export default function HomePage() {
       </section>
 
       {/* 03 — SATIC CPD */}
-      <section id="cpd" className="px-6 py-12 md:py-16 bg-white border-b border-brand-border">
+      <section id="cpd" className="px-6 pt-2 pb-12 md:pt-4 md:pb-16 bg-white border-b border-brand-border">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
 
@@ -320,7 +320,7 @@ export default function HomePage() {
             <div className="w-full lg:w-[42%] flex flex-col justify-center space-y-6">
               <div>
                 <h2 className="text-3xl md:text-5xl font-black font-display uppercase tracking-tight mb-2">
-                  <span className="text-brand-primary">SATIC</span> <span className="text-brand-secondary font-semibold">CPD</span>
+                  <span className="text-brand-primary">S<span className="text-brand-accent">Λ</span>TIC</span> <span className="text-brand-secondary font-semibold">CPD</span>
                 </h2>
                 <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-brand-secondary font-display leading-[1.2]">
                   Continuous Professional Development That Is Actually Continuous.
