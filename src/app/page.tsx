@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import {
   ChevronDown,
@@ -27,10 +27,33 @@ import {
 import JoinModal from "@/components/JoinModal";
 import EnquiryModal from "@/components/EnquiryModal";
 
+// Reusable count-up hook
+function useCountUp(target: number, duration = 1400) {
+  const [count, setCount] = useState(0);
+  const started = useRef(false);
+  useEffect(() => {
+    if (started.current) return;
+    started.current = true;
+    const start = performance.now();
+    const tick = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(eased * target));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    const timeout = setTimeout(() => requestAnimationFrame(tick), 500);
+    return () => clearTimeout(timeout);
+  }, [target, duration]);
+  return count;
+}
+
 export default function HomePage() {
   const [isJoinOpen, setIsJoinOpen] = useState(false);
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+
+  const teacherCount = useCountUp(1000);
+  const schoolCount  = useCountUp(50);
 
   const toggleFaq = (index: number) => {
     setActiveFaq(activeFaq === index ? null : index);
@@ -134,41 +157,71 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* 01 — HERO */}
-      <section className="relative px-6 pt-10 pb-12 md:pt-16 md:pb-20 lg:pt-24 lg:pb-24 bg-white overflow-hidden border-b border-brand-border">
-        <div className="mx-auto max-w-7xl relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+      {/* HERO */}
+      <section className="hero-mesh relative px-6 pt-10 pb-12 md:pt-16 md:pb-20 lg:pt-24 lg:pb-24 overflow-hidden border-b border-brand-border">
 
-            {/* Left Column Content */}
-            <div className="w-full lg:w-[48%] flex flex-col justify-center space-y-6">
-              <div className="space-y-2">
-                <span className="text-xs md:text-sm font-bold tracking-widest text-brand-primary uppercase block">
-                  SATIC — THE TEACHERS' CLUB
+        {/* Decorative floating orbs */}
+        <div className="orb-float-slow pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-brand-primary/5 blur-3xl" />
+        <div className="orb-float-medium pointer-events-none absolute top-1/2 -right-20 h-56 w-56 rounded-full bg-brand-accent/8 blur-3xl" />
+        <div className="orb-float-slow pointer-events-none absolute bottom-0 left-1/3 h-40 w-40 rounded-full bg-brand-secondary/5 blur-2xl" />
+
+        {/* Subtle dot-grid overlay */}
+        <div className="pointer-events-none absolute inset-0 editorial-grid opacity-40" />
+
+        <div className="mx-auto max-w-7xl relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+
+            {/* ── Left Column ── */}
+            <div className="w-full lg:w-[48%] flex flex-col justify-center space-y-7">
+
+              {/* Trust badge */}
+              <div className="fade-up-1">
+                <span className="inline-flex items-center gap-2 bg-brand-primary/8 border border-brand-primary/15 text-brand-primary text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full font-display">
+                  <Sparkles size={12} className="text-brand-accent" />
+                  Trusted by 1,000+ Teachers Across India
                 </span>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-secondary leading-[1.1] font-display">
-                  A Professional Home for Every Teacher.
+              </div>
+
+              {/* Headline */}
+              <div className="fade-up-2 space-y-1">
+                <p className="text-xs md:text-sm font-bold tracking-widest text-brand-primary/70 uppercase font-display">
+                  SATIC — THE TEACHERS' CLUB
+                </p>
+                <h1 className="text-4xl md:text-5xl lg:text-[3.75rem] font-extrabold tracking-tight text-brand-secondary leading-[1.1] font-display">
+                  A Professional Home for{" "}
+                  <span className="relative inline-block text-brand-primary">
+                    Every Teacher.
+                    <span className="hero-underline absolute inset-x-0 bottom-0 h-[3px] rounded-full" />
+                  </span>
                 </h1>
               </div>
-              <p className="text-base md:text-lg text-brand-text/85 leading-relaxed font-body">
+
+              {/* Sub-copy */}
+              <p className="fade-up-3 text-base md:text-lg text-brand-text/80 leading-relaxed font-body max-w-lg">
                 SATIC — The Teachers' Club is a professional community where teachers continuously learn, practise, grow and get recognised.
               </p>
 
               {/* Stats Block */}
-              <div className="grid grid-cols-2 gap-6 py-4 border-y border-brand-border max-w-sm">
-                <div>
-                  <span className="text-3xl md:text-4xl font-black text-brand-primary block leading-none mb-1 font-display">1000+</span>
-                  <span className="text-xs font-semibold text-brand-text/60 uppercase tracking-wider font-body">Teachers</span>
+              <div className="fade-up-4 grid grid-cols-2 gap-6 py-5 border-y border-brand-border/60 max-w-xs">
+                <div className="stat-pop">
+                  <span className="text-4xl md:text-5xl font-black text-brand-primary block leading-none mb-1 font-display tabular-nums">
+                    {teacherCount >= 1000 ? "1,000" : teacherCount.toLocaleString()}+
+                  </span>
+                  <span className="text-xs font-bold text-brand-text/55 uppercase tracking-widest font-body">Teachers</span>
                 </div>
-                <div>
-                  <span className="text-3xl md:text-4xl font-black text-brand-primary block leading-none mb-1 font-display">50+</span>
-                  <span className="text-xs font-semibold text-brand-text/60 uppercase tracking-wider font-body">Schools</span>
+                <div className="stat-pop" style={{ animationDelay: "0.7s" }}>
+                  <span className="text-4xl md:text-5xl font-black text-brand-primary block leading-none mb-1 font-display tabular-nums">
+                    {schoolCount}+
+                  </span>
+                  <span className="text-xs font-bold text-brand-text/55 uppercase tracking-widest font-body">Schools</span>
                 </div>
               </div>
 
-              <div className="pt-2 flex flex-col sm:flex-row gap-3 font-display">
+              {/* CTA Buttons */}
+              <div className="fade-up-5 pt-1 flex flex-col sm:flex-row gap-3 font-display">
                 <button
                   onClick={() => setIsJoinOpen(true)}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-primary hover:bg-brand-secondary text-white font-bold py-4 px-8 shadow-lg shadow-brand-primary/10 transition-premium text-sm cursor-pointer"
+                  className="btn-pulse inline-flex items-center justify-center gap-2 rounded-full bg-brand-primary hover:bg-brand-secondary text-white font-bold py-4 px-8 transition-premium text-sm cursor-pointer"
                 >
                   <span>Join SATIC at just ₹899/year</span>
                   <ArrowRight size={16} />
@@ -176,7 +229,7 @@ export default function HomePage() {
 
                 <a
                   href="#cpd"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FAF9F6] border border-brand-border hover:bg-brand-bg text-brand-secondary font-bold py-4 px-8 transition-premium text-sm"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/70 border border-brand-border hover:bg-white hover:border-brand-primary/30 text-brand-secondary font-bold py-4 px-8 transition-premium text-sm backdrop-blur-sm"
                 >
                   <span>Explore SATIC CPD</span>
                   <ArrowDown size={16} className="animate-bounce" />
@@ -184,17 +237,41 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column Illustration */}
-            <div className="w-full lg:w-[52%]">
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden border border-brand-border shadow-md transition-all duration-300 hover:border-brand-primary/15">
-                <Image
-                  src="/teachers-collaborating-indian.png"
-                  alt="SATIC Professional Teachers Collaborating"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-w-1024px) 100vw, 50vw"
-                  priority
-                />
+            {/* ── Right Column — Image ── */}
+            <div className="fade-in-right w-full lg:w-[52%]">
+              <div className="relative">
+                {/* Glow ring behind image */}
+                <div className="absolute -inset-2 rounded-[2rem] bg-gradient-to-br from-brand-primary/20 via-brand-accent/10 to-brand-secondary/20 blur-xl opacity-70" />
+
+                {/* Image card */}
+                <div className="relative aspect-[4/3] rounded-[1.75rem] overflow-hidden border-2 border-white shadow-2xl shadow-brand-primary/10">
+                  <Image
+                    src="/teachers-collaborating-indian.png"
+                    alt="SATIC Professional Teachers Collaborating"
+                    fill
+                    className="object-cover object-center transition-transform duration-700 hover:scale-105"
+                    sizes="(max-width: 1024px) 100vw, 52vw"
+                    priority
+                  />
+                  {/* Dark gradient overlay at bottom */}
+                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-brand-secondary/70 to-transparent" />
+
+                  {/* Floating badge inside image */}
+                  <div className="absolute bottom-5 left-5 flex items-center gap-3 bg-white/95 backdrop-blur-md rounded-2xl px-4 py-3 shadow-lg">
+                    <div className="w-9 h-9 rounded-xl bg-brand-primary flex items-center justify-center shrink-0">
+                      <Award size={18} className="text-white" />
+                    </div>
+                    <div>
+                      <p className="text-[11px] font-extrabold text-brand-secondary font-display uppercase tracking-wide leading-none">CPD Certified</p>
+                      <p className="text-[10px] text-brand-text/60 font-body mt-0.5">Continuous Professional Development</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating stat pill — top right */}
+                <div className="absolute -top-4 -right-4 bg-brand-accent text-brand-secondary text-[11px] font-extrabold font-display px-4 py-2 rounded-full shadow-lg tracking-wide uppercase">
+                  ₹899 / year
+                </div>
               </div>
             </div>
 
