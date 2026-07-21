@@ -448,47 +448,49 @@ export default function HomePage() {
       </section>
 
       {/* 04 — 10-MINUTE PRACTICE */}
-      <section id="practice" className="px-6 py-20 md:py-28 bg-brand-secondary text-white border-b border-brand-border relative overflow-hidden">
+      <section id="practice" className="px-6 py-12 md:py-16 bg-brand-secondary text-white border-b border-brand-border relative overflow-hidden">
         {/* Subtle background decorative shapes */}
         <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
         <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
 
         <div className="mx-auto max-w-7xl relative z-10">
-          <div className="max-w-3xl mb-16 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-accent font-display">10-Minute Practice</span>
-            <span className="text-xs font-bold uppercase tracking-widest text-white/70 block font-display">MONDAY–FRIDAY</span>
-            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white font-display">
-              10 Minutes. One Practical Step Forward.
-            </h2>
-            <p className="text-base md:text-lg text-white/90 leading-relaxed font-body font-medium">
-              Professional development designed to fit into a teacher's real working day.
-            </p>
-            <p className="text-sm md:text-base text-white/80 leading-relaxed font-body">
-              Teachers receive a short professional practice activity, complete it when convenient and continue building practical professional skills—one small step at a time.
-            </p>
-          </div>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
 
-          {/* How It Works List */}
-          <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-10 shadow-xl mb-16">
-            <h3 className="text-lg font-bold text-white uppercase tracking-wider mb-6 font-display">How It Works</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { step: "01", title: "Receive", desc: "Get your practice activity." },
-                { step: "02", title: "Practise", desc: "Spend around 10 minutes completing it." },
-                { step: "03", title: "Submit", desc: "Submit your work when you're free." },
-                { step: "04", title: "Get Reviewed", desc: "Receive feedback on your practice." },
-                { step: "05", title: "Earn Points", desc: "Build your Practice Points." },
-                { step: "06", title: "Track Progress", desc: "See your professional growth over time." }
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-start p-5 bg-brand-bg text-brand-text border border-brand-border/60 rounded-2xl shadow-sm hover:scale-[1.02] transition-premium">
-                  <span className="text-2xl font-black text-brand-primary font-display leading-none mt-1">{item.step}</span>
-                  <div className="font-body">
-                    <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{item.title}</h4>
-                    <p className="text-sm md:text-base text-brand-text/75 leading-relaxed mt-0.5">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+            {/* Left Column: Heading and Explainer Text */}
+            <div className="w-full lg:w-[48%] space-y-6">
+              <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white font-display leading-[1.15]">
+                <span className="text-brand-accent">10 Minutes.</span> One Practical Step Forward.
+              </h2>
+              <div className="space-y-4">
+                <p className="text-base md:text-lg text-white/90 leading-relaxed font-body font-medium">
+                  Professional development designed to fit into a teacher's real working day.
+                </p>
+                <p className="text-sm md:text-base text-white/80 leading-relaxed font-body">
+                  Teachers receive a short professional practice activity, complete it when convenient and continue building practical professional skills—one small step at a time.
+                </p>
+              </div>
             </div>
+
+            {/* Right Column: 4 Steps */}
+            <div className="w-full lg:w-[48%]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {[
+                  { step: "01", title: "Receive", desc: "Get your practice activity." },
+                  { step: "02", title: "Practise", desc: "Spend around 10 minutes completing it." },
+                  { step: "03", title: "Submit", desc: "Submit your work and get mentor feedback." },
+                  { step: "04", title: "Track", desc: "Earn Practice Points and track growth." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-3.5 items-start p-4.5 bg-brand-bg text-brand-text border border-brand-border/60 rounded-2xl shadow-sm hover:scale-[1.02] transition-premium">
+                    <span className="text-xl font-black text-brand-primary font-display leading-none mt-0.5">{item.step}</span>
+                    <div className="font-body">
+                      <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{item.title}</h4>
+                      <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed mt-0.5">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
 
           {/* What Can Teachers Practise Section */}
