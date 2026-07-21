@@ -202,20 +202,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 02 — MEMBERSHIP BENEFITS */}
-      <section id="benefits" className="px-6 py-16 md:py-24 bg-[#FAF9F6]/40 border-b border-brand-border">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl mb-16 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-primary font-display">Membership Benefits</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-secondary font-display">
+      {/* MEMBERSHIP BENEFITS */}
+      <section id="benefits" className="px-6 py-12 md:py-20 bg-white border-b border-brand-border">
+        <div className="mx-auto max-w-7xl bg-brand-primary text-white rounded-[2.5rem] p-8 md:p-16 shadow-xl relative overflow-hidden">
+          {/* Subtle background decorative shapes */}
+          <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
+          <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
+
+          <div className="max-w-3xl mb-16 space-y-4 relative z-10">
+            <span className="text-xs font-bold uppercase tracking-wider text-brand-accent font-display">Membership Benefits</span>
+            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white font-display">
               Everything You Need to Keep Growing.
             </h2>
-            <p className="text-base md:text-lg text-brand-text/75 leading-relaxed font-body">
+            <p className="text-base md:text-lg text-white/85 leading-relaxed font-body">
               Your SATIC membership gives you access to the complete SATIC CPD experience.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
             {[
               { title: "10-Minute Practice", desc: "Short, practical professional-development activities throughout the week.", icon: Clock },
               { title: "SATIC Teachers' Talk", desc: "Weekly live professional-development sessions.", icon: Video },
@@ -226,14 +230,14 @@ export default function HomePage() {
               return (
                 <div
                   key={i}
-                  className="rounded-2xl border border-brand-border bg-white p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-brand-primary/15 h-full shadow-xs"
+                  className="rounded-2xl border border-white/10 bg-white/10 p-6 md:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:bg-white/15 h-full"
                 >
                   <div className="space-y-4">
-                    <div className="w-12 h-12 rounded-xl bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+                    <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white">
                       <Icon size={22} />
                     </div>
-                    <h3 className="text-lg font-bold text-brand-secondary font-display">{benefit.title}</h3>
-                    <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed font-body">{benefit.desc}</p>
+                    <h3 className="text-lg font-bold text-white font-display">{benefit.title}</h3>
+                    <p className="text-sm text-white/80 leading-relaxed font-body">{benefit.desc}</p>
                   </div>
                 </div>
               );
@@ -254,7 +258,7 @@ export default function HomePage() {
                 Continuous Professional Development That Is Actually Continuous.
               </h2>
             </div>
-            <div className="max-w-lg lg:mt-10 space-y-4 text-xs md:text-sm text-brand-text/75 leading-relaxed font-body">
+            <div className="max-w-lg lg:mt-10 space-y-4 text-sm md:text-base text-brand-text/75 leading-relaxed font-body">
               <p>Professional development shouldn't be limited to a one-day workshop or an occasional training session.</p>
               <p>SATIC CPD is designed to keep teachers connected to professional learning through short, practical and consistent experiences that fit into their professional lives.</p>
             </div>
@@ -281,8 +285,8 @@ export default function HomePage() {
                       <Icon size={20} />
                     </div>
                     <h4 className="text-base font-bold text-brand-secondary font-display">{step.title}</h4>
-                    <p className="text-xs md:text-sm text-brand-text leading-relaxed font-body font-medium">{step.desc}</p>
-                    <p className="text-[11px] text-brand-text/60 leading-relaxed font-body">{step.detail}</p>
+                    <p className="text-sm md:text-base text-brand-text leading-relaxed font-body font-medium">{step.desc}</p>
+                    <p className="text-xs text-brand-text/60 leading-relaxed font-body">{step.detail}</p>
                   </div>
                 );
               })}
@@ -306,7 +310,7 @@ export default function HomePage() {
 
               <div className="max-w-xl mx-auto pt-4">
                 <h4 className="text-base font-bold text-brand-secondary font-display">We put the &quot;Continuing&quot; back into Continuing Professional Development.</h4>
-                <p className="text-xs md:text-sm text-brand-text/75 mt-1 font-body">Professional development that becomes part of a teacher's professional life.</p>
+                <p className="text-sm md:text-base text-brand-text/75 mt-1 font-body">Professional development that becomes part of a teacher's professional life.</p>
               </div>
             </div>
 
@@ -327,7 +331,7 @@ export default function HomePage() {
             <p className="text-base md:text-lg text-brand-text/80 leading-relaxed font-body font-medium">
               Professional development designed to fit into a teacher's real working day.
             </p>
-            <p className="text-xs md:text-sm text-brand-text/70 leading-relaxed font-body">
+            <p className="text-sm md:text-base text-brand-text/70 leading-relaxed font-body">
               Teachers receive a short professional practice activity, complete it when convenient and continue building practical professional skills—one small step at a time.
             </p>
           </div>
@@ -348,7 +352,7 @@ export default function HomePage() {
                   <span className="text-2xl font-black text-brand-accent font-display leading-none mt-1">{item.step}</span>
                   <div className="font-body">
                     <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{item.title}</h4>
-                    <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed mt-0.5">{item.desc}</p>
+                    <p className="text-sm md:text-base text-brand-text/75 leading-relaxed mt-0.5">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -375,37 +379,11 @@ export default function HomePage() {
                     </div>
                     <div className="font-body">
                       <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{item.title}</h4>
-                      <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed mt-1">{item.desc}</p>
+                      <p className="text-sm md:text-base text-brand-text/75 leading-relaxed mt-1">{item.desc}</p>
                     </div>
                   </div>
                 );
               })}
-            </div>
-          </div>
-
-          {/* One Month Skill Focus Card */}
-          <div className="bg-brand-secondary text-white rounded-3xl p-6 md:p-10 shadow-sm relative overflow-hidden mb-16">
-            <div className="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-brand-primary opacity-20"></div>
-            <div className="relative z-10 max-w-3xl space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-brand-accent font-display">One Month. One Skill Focus.</span>
-              <h3 className="text-2xl md:text-3xl font-extrabold font-display">Focused 30-Day Cohort Batches</h3>
-              <p className="text-sm md:text-base text-white/80 leading-relaxed font-body">
-                Each month, teachers participate in a focused Practice Batch around a specific professional skill area.
-              </p>
-
-              <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-xs font-bold tracking-wider font-display uppercase">
-                <span>Practise</span>
-                <ArrowRight size={10} />
-                <span>Build Skills</span>
-                <ArrowRight size={10} />
-                <span>Complete the Batch</span>
-                <ArrowRight size={10} />
-                <span>Earn a Digital Certificate</span>
-              </div>
-
-              <p className="text-xs text-white/60 leading-relaxed font-body italic">
-                Digital certificates are awarded based on the completion criteria of eligible Practice Batches.
-              </p>
             </div>
           </div>
 
@@ -419,10 +397,10 @@ export default function HomePage() {
                 { quote: "It's the first professional development program that doesn't feel like a chore. The bite-sized daily practices fit perfectly into my busy schedule.", name: "Kavita Rao", school: "English Teacher, Bishop Cotton School" }
               ].map((t, i) => (
                 <div key={i} className="bg-white border border-brand-border rounded-2xl p-6 shadow-xs flex flex-col justify-between">
-                  <p className="text-xs md:text-sm text-brand-text/80 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
+                  <p className="text-sm md:text-base text-brand-text/80 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
                   <div>
                     <h5 className="font-bold text-brand-secondary text-xs md:text-sm font-display">{t.name}</h5>
-                    <span className="text-[10px] text-brand-text/50 block font-body">{t.school}</span>
+                    <span className="text-xs text-brand-text/50 block font-body">{t.school}</span>
                   </div>
                 </div>
               ))}
@@ -444,7 +422,7 @@ export default function HomePage() {
             <p className="text-base md:text-lg text-brand-text/80 leading-relaxed font-body">
               SATIC Teachers' Talk is the live learning component of the SATIC CPD experience.
             </p>
-            <p className="text-xs md:text-sm text-brand-text/70 leading-relaxed font-body">
+            <p className="text-sm md:text-base text-brand-text/70 leading-relaxed font-body">
               Teachers come together with speakers, experts and fellow educators to explore practical ideas, discuss professional challenges and discover approaches relevant to their professional lives.
             </p>
           </div>
@@ -464,7 +442,7 @@ export default function HomePage() {
                     <Icon size={18} />
                   </div>
                   <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display mb-1">{exp.title}</h4>
-                  <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed font-body">{exp.desc}</p>
+                  <p className="text-sm md:text-base text-brand-text/75 leading-relaxed font-body">{exp.desc}</p>
                 </div>
               );
             })}
@@ -484,7 +462,7 @@ export default function HomePage() {
               ].map((topic, i) => (
                 <div key={i} className="bg-white border border-brand-border rounded-xl p-5 shadow-xs flex flex-col justify-between">
                   <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{topic.title}</h4>
-                  <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed mt-2 font-body">{topic.desc}</p>
+                  <p className="text-sm md:text-base text-brand-text/75 leading-relaxed mt-2 font-body">{topic.desc}</p>
                 </div>
               ))}
             </div>
@@ -499,10 +477,10 @@ export default function HomePage() {
                 { quote: "The 30-minute format is perfect. It's concise, high-impact, and directly focuses on what actually works in Indian classrooms.", name: "Priya Deshmukh", school: "Primary Teacher, Podar International School" }
               ].map((t, i) => (
                 <div key={i} className="bg-white border border-brand-border rounded-2xl p-6 shadow-xs flex flex-col justify-between">
-                  <p className="text-xs md:text-sm text-brand-text/80 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
+                  <p className="text-sm md:text-base text-brand-text/80 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
                   <div>
                     <h5 className="font-bold text-brand-secondary text-xs md:text-sm font-display">{t.name}</h5>
-                    <span className="text-[10px] text-brand-text/50 block font-body">{t.school}</span>
+                    <span className="text-xs text-brand-text/50 block font-body">{t.school}</span>
                   </div>
                 </div>
               ))}
@@ -521,7 +499,7 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-secondary font-display">
               Built Around a Teacher's Professional Life.
             </h2>
-            <p className="text-base md:text-lg text-brand-text/75 leading-relaxed font-body">
+            <p className="text-lg md:text-xl text-brand-text/75 leading-relaxed font-body">
               SATIC CPD focuses on four areas that influence a teacher's effectiveness in the classroom, relationships within the school community, everyday productivity and long-term professional growth.
             </p>
           </div>
@@ -540,9 +518,9 @@ export default function HomePage() {
                     <span className="text-xl font-black text-brand-accent font-display">{focus.id}</span>
                   </div>
                   <h3 className="text-xl font-bold text-brand-secondary font-display mb-2">{focus.area}</h3>
-                  <p className="text-xs md:text-sm text-brand-text/75 font-body leading-relaxed mb-6">{focus.desc}</p>
+                  <p className="text-sm md:text-base text-brand-text/75 font-body leading-relaxed mb-6">{focus.desc}</p>
 
-                  <div className="grid grid-cols-2 gap-3 border-t border-brand-border/60 pt-5 font-body text-xs text-brand-text/90 font-medium">
+                  <div className="grid grid-cols-2 gap-3 border-t border-brand-border/60 pt-5 font-body text-sm text-brand-text/90 font-medium">
                     {focus.bullets.map((bullet, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
                         <CheckCircle2 size={14} className="text-brand-primary shrink-0" />
@@ -555,7 +533,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <p className="text-xs md:text-sm text-brand-text/60 leading-relaxed text-center font-body italic max-w-xl mx-auto border-t border-brand-border/60 pt-6">
+          <p className="text-sm md:text-base text-brand-text/60 leading-relaxed text-center font-body italic max-w-xl mx-auto border-t border-brand-border/60 pt-6">
             10-Minute Practice and SATIC Teachers' Talk topics are developed across these four focus areas, creating a balanced approach to continuous professional development.
           </p>
         </div>
@@ -570,26 +548,28 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-secondary font-display">
               A Year of Continuous Professional Growth.
             </h2>
-            <p className="text-base md:text-lg text-brand-text/75 leading-relaxed font-body">
+            <p className="text-lg md:text-xl text-brand-text/75 leading-relaxed font-body">
               Join SATIC — The Teachers' Club and get access to the complete SATIC CPD experience.
             </p>
           </div>
 
           {/* Centered Pricing Card */}
-          <div className="max-w-md mx-auto bg-[#FAF9F6]/40 border border-brand-border rounded-3xl p-8 shadow-md flex flex-col justify-between space-y-6">
-            <div className="text-center">
-              <span className="bg-brand-primary/10 text-brand-primary text-[10px] font-extrabold tracking-wider uppercase px-2.5 py-1 rounded-full font-display">
+          <div className="max-w-md mx-auto bg-brand-secondary text-white border-transparent rounded-3xl p-8 shadow-md flex flex-col justify-between space-y-6 relative overflow-hidden">
+            <div className="absolute -top-10 -left-10 h-32 w-32 rounded-full bg-brand-primary opacity-25"></div>
+            
+            <div className="text-center relative z-10">
+              <span className="bg-white/10 text-brand-accent text-[10px] font-extrabold tracking-wider uppercase px-2.5 py-1 rounded-full font-display">
                 ANNUAL INDIVIDUAL PLAN
               </span>
               <div className="flex items-baseline justify-center space-x-1.5 mt-5">
-                <span className="text-5xl font-black text-brand-secondary font-display">₹899</span>
-                <span className="text-brand-text/60 text-sm font-body">/ year</span>
+                <span className="text-5xl font-black text-white font-display">₹899</span>
+                <span className="text-white/60 text-sm font-body">/ year</span>
               </div>
-              <span className="text-[11px] text-emerald-600 font-bold font-body block mt-2">That's less than ₹3 a day.</span>
-              <span className="text-xs text-brand-text/50 block font-body mt-0.5">A small daily investment in continuous professional growth.</span>
+              <span className="text-[11px] text-brand-accent font-bold font-body block mt-2">That's less than ₹3 a day.</span>
+              <span className="text-xs text-white/70 block font-body mt-0.5">A small daily investment in continuous professional growth.</span>
             </div>
 
-            <div className="border-t border-brand-border/60 pt-5 space-y-3.5 text-xs md:text-sm font-body text-brand-text/90">
+            <div className="border-t border-white/10 pt-5 space-y-3.5 text-xs md:text-sm font-body text-white/90 relative z-10">
               {[
                 "10-Minute Practice",
                 "SATIC Teachers' Talk",
@@ -601,7 +581,7 @@ export default function HomePage() {
                 "SATIC Teacher Community"
               ].map((benefit, i) => (
                 <div key={i} className="flex items-center space-x-3">
-                  <Check size={16} className="text-brand-primary shrink-0" />
+                  <Check size={16} className="text-brand-accent shrink-0" />
                   <span>{benefit}</span>
                 </div>
               ))}
@@ -609,12 +589,12 @@ export default function HomePage() {
 
             <button
               onClick={() => setIsJoinOpen(true)}
-              className="w-full bg-brand-primary hover:bg-brand-secondary text-white py-4 rounded-2xl font-bold text-xs uppercase tracking-widest transition-premium cursor-pointer font-display shadow-md shadow-brand-primary/10"
+              className="w-full bg-white hover:bg-brand-primary hover:text-white text-brand-secondary py-4 rounded-2xl font-bold text-xs uppercase tracking-widest transition-premium cursor-pointer font-display shadow-md relative z-10"
             >
               Join SATIC · ₹899/year →
             </button>
 
-            <p className="text-[10px] text-brand-text/40 text-center font-body leading-relaxed">
+            <p className="text-[10px] text-white/50 text-center font-body leading-relaxed relative z-10">
               ₹899 is charged annually. &quot;Less than ₹3 a day&quot; illustrates the equivalent daily investment.
             </p>
           </div>
@@ -630,10 +610,10 @@ export default function HomePage() {
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-secondary font-display">
               Invest in Teachers Who Keep Growing.
             </h2>
-            <p className="text-base md:text-lg text-brand-text/75 leading-relaxed font-body">
+            <p className="text-lg md:text-xl text-brand-text/75 leading-relaxed font-body">
               Give your teaching faculty access to a continuous professional-development experience designed around teachers' real working schedules.
             </p>
-            <p className="text-xs md:text-sm text-brand-text/70 leading-relaxed font-body">
+            <p className="text-sm md:text-base text-brand-text/70 leading-relaxed font-body">
               Through SATIC CPD, teachers stay connected to professional learning through 10-Minute Practice during the week, SATIC Teachers' Talk every Saturday and focused professional practice throughout the year.
             </p>
           </div>
@@ -652,7 +632,7 @@ export default function HomePage() {
               ].map((item, i) => (
                 <div key={i} className="bg-white border border-brand-border rounded-xl p-5 md:p-6 shadow-xs flex flex-col justify-between">
                   <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display mb-1">{item.title}</h4>
-                  <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed font-body">{item.desc}</p>
+                  <p className="text-sm md:text-base text-brand-text/75 leading-relaxed font-body">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -668,7 +648,7 @@ export default function HomePage() {
                 <p className="text-sm md:text-base text-white/80 leading-relaxed font-body">
                   SATIC offers special institutional membership options for schools enrolling their teaching faculty.
                 </p>
-                <p className="text-xs md:text-sm text-white/70 leading-relaxed font-body">
+                <p className="text-sm md:text-base text-white/70 leading-relaxed font-body">
                   Contact our team to understand institutional membership, enrolment and how SATIC CPD can be introduced to your teachers.
                 </p>
               </div>
@@ -686,7 +666,7 @@ export default function HomePage() {
               <div className="space-y-4 flex flex-col items-center w-full">
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-primary font-display block">Speak With SATIC</span>
 
-                <div className="space-y-3 font-body text-xs md:text-sm text-brand-text/80 flex flex-col items-center">
+                <div className="space-y-3 font-body text-sm md:text-base text-brand-text/80 flex flex-col items-center">
                   <div className="flex items-center space-x-2">
                     <Phone size={14} className="text-brand-primary shrink-0" />
                     <span>+91 94093 48046</span>
@@ -747,7 +727,7 @@ export default function HomePage() {
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${activeFaq === idx ? "max-h-[300px] border-t border-brand-border/40" : "max-h-0"
                     }`}
                 >
-                  <div className="p-5 text-xs md:text-sm text-brand-text/70 leading-relaxed font-body bg-[#faf9f6]/30">
+                  <div className="p-5 text-sm md:text-base text-brand-text/70 leading-relaxed font-body bg-[#faf9f6]/30">
                     {faq.a}
                   </div>
                 </div>
@@ -758,7 +738,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10 — FINAL CTA */}
+      {/* FINAL CTA */}
       <section className="px-6 py-20 bg-brand-secondary text-white relative overflow-hidden text-center border-t border-brand-secondary">
         <div className="absolute -top-12 -left-12 h-32 w-32 rounded-full bg-brand-primary opacity-10"></div>
         <div className="absolute -bottom-12 -right-12 h-40 w-40 rounded-full bg-brand-accent opacity-10"></div>
@@ -766,7 +746,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto space-y-6 relative z-10">
           <h2 className="text-4xl md:text-5xl font-black font-display">A Professional Home for Every Teacher.</h2>
 
-          <div className="text-sm md:text-base text-white/80 space-y-1 font-body">
+          <div className="text-base md:text-lg text-white/80 space-y-1 font-body">
             <p>For teachers who keep learning.</p>
             <p>For teachers who keep practising.</p>
             <p>For teachers who keep growing.</p>
@@ -807,7 +787,7 @@ export default function HomePage() {
                   style={{ height: "auto" }}
                 />
               </div>
-              <p className="text-xs md:text-sm text-white/70 max-w-sm leading-relaxed font-body">
+              <p className="text-sm md:text-base text-white/70 max-w-sm leading-relaxed font-body">
                 SATIC — The Teachers' Club
                 <br />
                 A Professional Home for Every Teacher.
@@ -830,15 +810,15 @@ export default function HomePage() {
               <h3 className="text-sm font-bold text-brand-accent uppercase tracking-wider">
                 Let's Connect
               </h3>
-              <ul className="space-y-3 text-xs md:text-sm text-white/80">
+              <ul className="space-y-3 text-sm md:text-base text-white/80">
                 <li>
                   <a href="mailto:joinsatic@gmail.com" className="hover:text-white transition-colors block">
                     joinsatic@gmail.com
                   </a>
                 </li>
                 <li>
-                  <a href="https://wa.me/919033270915" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors block">
-                    +91 9033270915
+                  <a href="https://wa.me/919409348046" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors block">
+                    +91 94093 48046
                   </a>
                 </li>
               </ul>
