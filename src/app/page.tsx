@@ -158,7 +158,7 @@ export default function HomePage() {
       </header>
 
       {/* HERO */}
-      <section className="hero-mesh relative px-6 pt-6 pb-12 md:pt-10 md:pb-20 lg:pt-14 lg:pb-24 overflow-hidden border-b border-brand-border">
+      <section className="hero-mesh relative px-6 pt-2 pb-10 md:pt-4 md:pb-16 lg:pt-6 lg:pb-20 overflow-hidden border-b border-brand-border">
 
         {/* Decorative floating orbs */}
         <div className="orb-float-slow pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-brand-primary/5 blur-3xl" />
@@ -172,17 +172,14 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
 
             {/* ── Left Column ── */}
-            <div className="w-full lg:w-[48%] flex flex-col justify-center space-y-7">
+            <div className="w-full lg:w-[48%] flex flex-col justify-center space-y-5">
 
               {/* Headline */}
               <div className="fade-up-1 space-y-1">
-                <p className="text-xs md:text-sm font-bold tracking-widest text-brand-primary/70 uppercase font-display">
-                  SATIC — THE TEACHERS' CLUB
-                </p>
                 <h1 className="text-4xl md:text-5xl lg:text-[3.75rem] font-extrabold tracking-tight text-brand-secondary leading-[1.1] font-display">
-                  A Professional Home for{" "}
+                  Grow as a Teacher{" "}
                   <span className="relative inline-block text-brand-primary">
-                    Every Teacher.
+                    Every Day.
                     <span className="hero-underline absolute inset-x-0 bottom-0 h-[3px] rounded-full" />
                   </span>
                 </h1>
