@@ -111,14 +111,14 @@ export default function HomePage() {
 
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-brand-border bg-[#F8F5EC]/95 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3 md:py-4 lg:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 md:py-4.5 lg:px-8">
           <a href="#" className="flex items-center focus:outline-none" aria-label="SATIC Home">
             <Image
               src="/satic-logo.png"
               alt="SATIC Logo"
-              width={140}
-              height={42}
-              className="w-[110px] md:w-[140px] h-auto object-contain"
+              width={180}
+              height={54}
+              className="w-[130px] md:w-[175px] h-auto object-contain"
               style={{ height: "auto" }}
               priority
             />
