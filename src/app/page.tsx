@@ -312,75 +312,138 @@ export default function HomePage() {
       </section>
 
       {/* 03 — SATIC CPD */}
-      <section id="cpd" className="px-6 py-16 md:py-24 bg-white border-b border-brand-border">
+      <section id="cpd" className="px-6 py-12 md:py-16 bg-white border-b border-brand-border">
         <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
 
-          <div className="flex flex-col lg:flex-row gap-12 items-start justify-between mb-16">
-            <div className="max-w-2xl space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-brand-primary font-display">SATIC CPD</span>
-              <span className="text-xs font-bold uppercase tracking-widest text-brand-primary/65 block font-display">INTRODUCING SATIC CPD</span>
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-secondary font-display">
-                Continuous Professional Development That Is Actually Continuous.
-              </h2>
+            {/* Left Column: Description & Tagline */}
+            <div className="w-full lg:w-[42%] flex flex-col justify-center space-y-6">
+              <div>
+                <h2 className="text-3xl md:text-5xl font-black font-display uppercase tracking-tight mb-2">
+                  <span className="text-brand-primary">SATIC</span> <span className="text-brand-secondary font-semibold">CPD</span>
+                </h2>
+                <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-brand-secondary font-display leading-[1.2]">
+                  Continuous Professional Development That Is Actually Continuous.
+                </h3>
+              </div>
+              
+              <div className="space-y-4 text-sm md:text-base text-brand-text/75 leading-relaxed font-body">
+                <p>Professional development shouldn't be limited to a one-day workshop or an occasional training session.</p>
+                <p>SATIC CPD is designed to keep teachers connected to professional learning through short, practical and consistent experiences that fit into their professional lives.</p>
+              </div>
+
+              <div className="border-t border-brand-border pt-4">
+                <p className="text-sm font-bold text-brand-primary font-display uppercase tracking-wider">
+                  We put the &quot;Continuing&quot; back into Continuing Professional Development.
+                </p>
+                <p className="text-xs text-brand-text/60 font-body mt-1">
+                  Professional development that becomes part of a teacher's professional life.
+                </p>
+              </div>
             </div>
-            <div className="max-w-lg lg:mt-10 space-y-4 text-sm md:text-base text-brand-text/75 leading-relaxed font-body">
-              <p>Professional development shouldn't be limited to a one-day workshop or an occasional training session.</p>
-              <p>SATIC CPD is designed to keep teachers connected to professional learning through short, practical and consistent experiences that fit into their professional lives.</p>
-            </div>
-          </div>
 
-          {/* Stepper block / Continuous Learning Cycle */}
-          <div className="bg-[#FAF9F6]/40 border border-brand-border rounded-3xl p-6 md:p-10 shadow-xs">
-            <h3 className="text-lg font-bold text-brand-secondary uppercase tracking-wider mb-8 font-display text-center">The Continuous Learning Cycle</h3>
+            {/* Right Column: Circular Learning Cycle */}
+            <div className="w-full lg:w-[55%] flex flex-col items-center">
+              
+              {/* Desktop Circular Flow (Visible on Desktop) */}
+              <div className="hidden lg:block relative w-[520px] h-[480px] shrink-0">
+                {/* Connecting Curved Arrow SVGs */}
+                <svg className="w-full h-full absolute inset-0 text-brand-primary/20 pointer-events-none" viewBox="0 0 520 480" fill="none">
+                  {/* Arrow from Daily (Top) to Weekly (Bottom-Right) */}
+                  <path d="M 330 90 Q 450 160 410 330" stroke="currentColor" strokeWidth="2" strokeDasharray="5 5" markerEnd="url(#arrow)" />
+                  {/* Arrow from Weekly (Bottom-Right) to Monthly (Bottom-Left) */}
+                  <path d="M 340 405 Q 260 445 180 405" stroke="currentColor" strokeWidth="2" strokeDasharray="5 5" markerEnd="url(#arrow)" />
+                  {/* Arrow from Monthly (Bottom-Left) to Daily (Top) */}
+                  <path d="M 110 330 Q 70 160 190 90" stroke="currentColor" strokeWidth="2" strokeDasharray="5 5" markerEnd="url(#arrow)" />
+                  
+                  {/* Arrowhead marker definition */}
+                  <defs>
+                    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="currentColor" />
+                    </marker>
+                  </defs>
+                </svg>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative">
-              {/* Divider lines between cycle steps */}
-              <div className="hidden lg:block absolute top-10 left-[25%] right-[25%] h-0.5 border-t border-dashed border-brand-primary/20 -z-10"></div>
-
-              {[
-                { time: "DAILY", title: "10-Minute Practice", desc: "Short, practical professional activities. Monday–Friday", detail: "Short, targeted worksheets and challenges designed to fit right into your preparation periods.", icon: Clock },
-                { time: "WEEKLY", title: "30-Minute Teachers' Talk", desc: "Live learning, expert insights and professional discussion. Every Saturday", detail: "Short, highly engaging discussion format. No fluff, direct focus on real-world classroom application.", icon: Video },
-                { time: "MONTHLY", title: "Skill-Focused Practice", desc: "A specific professional skill focus each month.", detail: "Go deep into one pedagogy module, practice consecutively, and get evaluated by specialists.", icon: GraduationCap }
-              ].map((step, i) => {
-                const Icon = step.icon;
-                return (
-                  <div key={i} className="flex flex-col items-center text-center space-y-3 bg-white p-6 rounded-2xl border border-brand-border shadow-xs">
-                    <span className="text-xs font-bold text-brand-primary tracking-widest bg-brand-primary/10 px-3 py-1 rounded-full">{step.time}</span>
-                    <div className="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center shadow-md">
-                      <Icon size={20} />
-                    </div>
-                    <h4 className="text-base font-bold text-brand-secondary font-display">{step.title}</h4>
-                    <p className="text-sm md:text-base text-brand-text leading-relaxed font-body font-medium">{step.desc}</p>
-                    <p className="text-xs text-brand-text/60 leading-relaxed font-body">{step.detail}</p>
+                {/* Center Circle loop badge */}
+                <div className="absolute top-[48%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-[#FAF9F6] border-2 border-brand-primary/10 rounded-full flex flex-col justify-center items-center text-center shadow-lg p-4 z-20">
+                  <div className="text-[11px] font-bold text-brand-secondary uppercase tracking-wide leading-relaxed">
+                    Learn &rarr; Practise<br />
+                    &rarr; Apply &rarr; Reflect<br />
+                    &rarr; Grow &rarr; Repeat
                   </div>
-                );
-              })}
-            </div>
+                  <div className="text-[10px] font-black text-brand-primary mt-2.5 flex items-center justify-center gap-1 uppercase tracking-widest">
+                    CONTINUE ↻
+                  </div>
+                </div>
 
-            {/* Bottom Loop Text */}
-            <div className="mt-12 text-center space-y-4">
-              <div className="inline-flex flex-wrap items-center justify-center gap-2 bg-brand-secondary text-white text-xs font-bold px-6 py-3 rounded-full tracking-wider font-display uppercase shadow-sm">
-                <span>Learn</span>
-                <ArrowRight size={12} />
-                <span>Practise</span>
-                <ArrowRight size={12} />
-                <span>Apply</span>
-                <ArrowRight size={12} />
-                <span>Reflect</span>
-                <ArrowRight size={12} />
-                <span>Grow</span>
-                <ArrowRight size={12} />
-                <span>Repeat ↻</span>
+                {/* DAILY Card (Top Center) */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[240px] bg-white border border-brand-border/80 rounded-2xl p-4 shadow-sm text-center z-10 hover:shadow-md transition-premium">
+                  <span className="inline-block text-[9px] font-extrabold text-brand-primary tracking-widest bg-brand-primary/10 px-2 py-0.5 rounded-full mb-2">DAILY</span>
+                  <div className="mx-auto w-9 h-9 rounded-full bg-brand-primary text-white flex items-center justify-center mb-2 shadow-xs">
+                    <Clock size={16} />
+                  </div>
+                  <h4 className="text-sm font-bold text-brand-secondary font-display mb-1">10-Minute Practice</h4>
+                  <p className="text-[11px] text-brand-text/75 leading-relaxed font-body">Short, practical activities.<br />Monday–Friday</p>
+                </div>
+
+                {/* WEEKLY Card (Bottom Right) */}
+                <div className="absolute bottom-4 right-0 w-[230px] bg-white border border-brand-border/80 rounded-2xl p-4 shadow-sm text-center z-10 hover:shadow-md transition-premium">
+                  <span className="inline-block text-[9px] font-extrabold text-brand-primary tracking-widest bg-brand-primary/10 px-2 py-0.5 rounded-full mb-2">WEEKLY</span>
+                  <div className="mx-auto w-9 h-9 rounded-full bg-brand-primary text-white flex items-center justify-center mb-2 shadow-xs">
+                    <Video size={16} />
+                  </div>
+                  <h4 className="text-sm font-bold text-brand-secondary font-display mb-1">30-Minute Teachers' Talk</h4>
+                  <p className="text-[11px] text-brand-text/75 leading-relaxed font-body">Live learning & discussions.<br />Every Saturday</p>
+                </div>
+
+                {/* MONTHLY Card (Bottom Left) */}
+                <div className="absolute bottom-4 left-0 w-[230px] bg-white border border-brand-border/80 rounded-2xl p-4 shadow-sm text-center z-10 hover:shadow-md transition-premium">
+                  <span className="inline-block text-[9px] font-extrabold text-brand-primary tracking-widest bg-brand-primary/10 px-2 py-0.5 rounded-full mb-2">MONTHLY</span>
+                  <div className="mx-auto w-9 h-9 rounded-full bg-brand-primary text-white flex items-center justify-center mb-2 shadow-xs">
+                    <GraduationCap size={16} />
+                  </div>
+                  <h4 className="text-sm font-bold text-brand-secondary font-display mb-1">Skill-Focused Practice</h4>
+                  <p className="text-[11px] text-brand-text/75 leading-relaxed font-body">Focused skill batches.<br />Ongoing modules</p>
+                </div>
               </div>
 
-              <div className="max-w-xl mx-auto pt-4">
-                <h4 className="text-base font-bold text-brand-secondary font-display">We put the &quot;Continuing&quot; back into Continuing Professional Development.</h4>
-                <p className="text-sm md:text-base text-brand-text/75 mt-1 font-body">Professional development that becomes part of a teacher's professional life.</p>
+              {/* Mobile Learning Stack (Visible on Mobile) */}
+              <div className="lg:hidden w-full space-y-6">
+                <div className="bg-brand-bg/60 border border-brand-border/60 rounded-3xl p-6 text-center shadow-xs">
+                  <h4 className="text-base font-bold text-brand-secondary uppercase tracking-wider mb-4 font-display">The Continuous Learning Cycle</h4>
+                  
+                  <div className="flex flex-col items-center space-y-6">
+                    {[
+                      { time: "DAILY", title: "10-Minute Practice", desc: "Short, practical activities. Monday–Friday", icon: Clock },
+                      { time: "WEEKLY", title: "30-Minute Teachers' Talk", desc: "Live learning, expert insights and professional discussion. Every Saturday", icon: Video },
+                      { time: "MONTHLY", title: "Skill-Focused Practice", desc: "Focused skill batches. Ongoing modules", icon: GraduationCap }
+                    ].map((step, i) => {
+                      const Icon = step.icon;
+                      return (
+                        <div key={i} className="w-full flex flex-col items-center text-center space-y-2.5 bg-white p-5 rounded-2xl border border-brand-border shadow-xs relative">
+                          <span className="text-[10px] font-bold text-brand-primary tracking-widest bg-brand-primary/10 px-2.5 py-0.5 rounded-full">{step.time}</span>
+                          <div className="w-10 h-10 rounded-full bg-brand-primary text-white flex items-center justify-center shadow-md">
+                            <Icon size={18} />
+                          </div>
+                          <h4 className="text-sm font-bold text-brand-secondary font-display">{step.title}</h4>
+                          <p className="text-xs text-brand-text/75 leading-relaxed font-body font-medium">{step.desc}</p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                  
+                  <div className="mt-6 inline-flex flex-col items-center justify-center gap-1 bg-[#FAF9F6] border border-brand-primary/10 px-6 py-4 rounded-2xl shadow-sm w-full">
+                    <div className="text-[10px] font-bold text-brand-secondary uppercase tracking-wider leading-relaxed">
+                      Learn &rarr; Practise &rarr; Apply &rarr; Reflect &rarr; Grow &rarr; Repeat
+                    </div>
+                    <div className="text-[9px] font-extrabold text-brand-primary mt-1 flex items-center justify-center gap-1 uppercase tracking-widest">CONTINUE ↻</div>
+                  </div>
+                </div>
               </div>
+
             </div>
 
           </div>
-
         </div>
       </section>
 
