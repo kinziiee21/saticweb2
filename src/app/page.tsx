@@ -269,19 +269,18 @@ export default function HomePage() {
       </section>
 
       {/* MEMBERSHIP BENEFITS */}
-      <section id="benefits" className="px-6 py-12 md:py-20 bg-white border-b border-brand-border">
-        <div className="mx-auto max-w-7xl bg-brand-primary text-white rounded-[2.5rem] p-8 md:p-16 shadow-xl relative overflow-hidden">
+      <section id="benefits" className="px-6 py-8 md:py-12 bg-white border-b border-brand-border">
+        <div className="mx-auto max-w-7xl bg-brand-secondary text-white rounded-[2.5rem] p-8 md:p-12 shadow-xl relative overflow-hidden">
           {/* Subtle background decorative shapes */}
           <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
           <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
 
-          <div className="max-w-3xl mb-16 space-y-4 relative z-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-accent font-display">Membership Benefits</span>
-            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white font-display">
-              Everything You Need to Keep Growing.
+          <div className="max-w-3xl mb-10 space-y-2 relative z-10">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tight text-white font-display">
+              TEACHERS BENEFIT
             </h2>
-            <p className="text-base md:text-lg text-white/85 leading-relaxed font-body">
-              Your SATIC membership gives you access to the complete SATIC CPD experience.
+            <p className="text-base md:text-xl text-brand-accent font-semibold tracking-wide font-display">
+              Elevate Your Teaching Practice
             </p>
           </div>
 
