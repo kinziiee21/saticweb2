@@ -389,7 +389,7 @@ export default function HomePage() {
       </section>
 
       {/* 04 — 10-MINUTE PRACTICE */}
-      <section id="practice" className="px-6 py-20 md:py-28 bg-brand-primary text-white border-b border-brand-border relative overflow-hidden">
+      <section id="practice" className="px-6 py-20 md:py-28 bg-brand-secondary text-white border-b border-brand-border relative overflow-hidden">
         {/* Subtle background decorative shapes */}
         <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
         <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
@@ -421,11 +421,11 @@ export default function HomePage() {
                 { step: "05", title: "Earn Points", desc: "Build your Practice Points." },
                 { step: "06", title: "Track Progress", desc: "See your professional growth over time." }
               ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-start p-4 rounded-xl hover:bg-white/10 transition-premium">
-                  <span className="text-2xl font-black text-brand-accent font-display leading-none mt-1">{item.step}</span>
+                <div key={i} className="flex gap-4 items-start p-5 bg-white text-brand-text border border-brand-border/60 rounded-2xl shadow-sm hover:scale-[1.02] transition-premium">
+                  <span className="text-2xl font-black text-brand-primary font-display leading-none mt-1">{item.step}</span>
                   <div className="font-body">
-                    <h4 className="font-bold text-white text-sm md:text-base font-display">{item.title}</h4>
-                    <p className="text-sm md:text-base text-white/80 leading-relaxed mt-0.5">{item.desc}</p>
+                    <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{item.title}</h4>
+                    <p className="text-sm md:text-base text-brand-text/75 leading-relaxed mt-0.5">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -446,13 +446,13 @@ export default function HomePage() {
               ].map((item, i) => {
                 const Icon = item.icon;
                 return (
-                  <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-5 md:p-6 shadow-md flex gap-4 items-start hover:bg-white/10 hover:-translate-y-1 transition-premium">
-                    <div className="rounded-lg bg-white/15 p-2 text-white shrink-0">
+                  <div key={i} className="bg-white border border-brand-border/60 rounded-xl p-5 md:p-6 shadow-sm flex gap-4 items-start hover:-translate-y-1 hover:shadow-md transition-premium text-brand-text">
+                    <div className="rounded-lg bg-brand-primary/10 text-brand-primary p-2 shrink-0">
                       <Icon size={18} />
                     </div>
                     <div className="font-body">
-                      <h4 className="font-bold text-white text-sm md:text-base font-display">{item.title}</h4>
-                      <p className="text-sm md:text-base text-white/80 leading-relaxed mt-1">{item.desc}</p>
+                      <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{item.title}</h4>
+                      <p className="text-sm md:text-base text-brand-text/75 leading-relaxed mt-1">{item.desc}</p>
                     </div>
                   </div>
                 );
@@ -469,11 +469,11 @@ export default function HomePage() {
                 { quote: "SATIC CPD has transformed how I plan my lessons. Learning to use AI tools step-by-step has saved me hours of administrative work every week.", name: "Rajesh Nair", school: "Secondary Math Teacher, Chinmaya Vidyalaya" },
                 { quote: "It's the first professional development program that doesn't feel like a chore. The bite-sized daily practices fit perfectly into my busy schedule.", name: "Kavita Rao", school: "English Teacher, Bishop Cotton School" }
               ].map((t, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 shadow-md flex flex-col justify-between hover:bg-white/10 transition-premium">
-                  <p className="text-sm md:text-base text-white/85 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
+                <div key={i} className="bg-white border border-brand-border/60 rounded-2xl p-6 shadow-sm flex flex-col justify-between hover:-translate-y-1 hover:shadow-md transition-premium text-brand-text">
+                  <p className="text-sm md:text-base text-brand-text/80 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
                   <div>
-                    <h5 className="font-bold text-white text-xs md:text-sm font-display">{t.name}</h5>
-                    <span className="text-xs text-white/60 block font-body">{t.school}</span>
+                    <h5 className="font-bold text-brand-secondary text-xs md:text-sm font-display">{t.name}</h5>
+                    <span className="text-xs text-brand-text/50 block font-body">{t.school}</span>
                   </div>
                 </div>
               ))}
