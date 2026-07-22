@@ -454,25 +454,14 @@ export default function HomePage() {
         <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
 
         <div className="mx-auto max-w-7xl relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 mb-16">
 
-            {/* Left Column: Heading and Explainer Text */}
-            <div className="w-full lg:w-[48%] space-y-6">
+            {/* Left Column: Heading and 4 Steps */}
+            <div className="w-full lg:w-[48%] space-y-8">
               <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white font-display leading-[1.15]">
                 <span className="text-brand-accent">10 Minutes.</span> One Practical Step Forward.
               </h2>
-              <div className="space-y-4">
-                <p className="text-base md:text-lg text-white/90 leading-relaxed font-body font-medium">
-                  Professional development designed to fit into a teacher's real working day.
-                </p>
-                <p className="text-sm md:text-base text-white/80 leading-relaxed font-body">
-                  Teachers receive a short professional practice activity, complete it when convenient and continue building practical professional skills—one small step at a time.
-                </p>
-              </div>
-            </div>
-
-            {/* Right Column: 4 Steps */}
-            <div className="w-full lg:w-[48%]">
+              
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { step: "01", title: "Receive", desc: "Get your practice activity." },
@@ -491,11 +480,24 @@ export default function HomePage() {
               </div>
             </div>
 
+            {/* Right Column: Teacher Practicing Image */}
+            <div className="w-full lg:w-[48%]">
+              <div className="relative aspect-square sm:aspect-[4/3] rounded-[1.75rem] overflow-hidden border-2 border-white/10 shadow-2xl">
+                <Image
+                  src="/teacher-practicing.png"
+                  alt="Indian teacher practicing CPD task on laptop and phone"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 48vw"
+                />
+              </div>
+            </div>
+
           </div>
 
           {/* What Can Teachers Practise Section */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white font-display text-center mb-8">What Can Teachers Practise?</h3>
+            <h3 className="text-2xl font-bold text-white font-display text-center mb-8">Monthly practice topics</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { title: "AI Tools Practice", desc: "Use AI tools for lesson planning, content creation and everyday professional tasks.", icon: Sparkles },
