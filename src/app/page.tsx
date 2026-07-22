@@ -550,7 +550,7 @@ export default function HomePage() {
       <section id="teachers-talk" className="bg-white border-b border-brand-border">
         
         {/* Part A: Main Content & Topics (1 Viewport Screen on Desktop) */}
-        <div className="px-6 lg:h-screen lg:min-h-[700px] lg:max-h-[920px] flex items-center relative overflow-hidden">
+        <div className="px-6 lg:h-[80vh] lg:min-h-[580px] lg:max-h-[780px] flex items-center relative overflow-hidden">
           <div className="mx-auto max-w-7xl w-full flex flex-col justify-center py-4">
             
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-8">
@@ -609,7 +609,7 @@ export default function HomePage() {
         </div>
 
         {/* Part B: Testimonials (Visible on Scroll) */}
-        <div className="px-6 py-12 md:py-16 bg-[#FAF9F6]/20 border-t border-brand-border/40">
+        <div className="px-6 pt-4 pb-12 md:pt-6 md:pb-16 bg-[#FAF9F6]/20 border-t border-brand-border/40">
           <div className="mx-auto max-w-7xl w-full">
             <h3 className="text-2xl md:text-3xl font-extrabold text-brand-secondary font-display text-center mb-8">What Teachers Say</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
