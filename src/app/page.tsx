@@ -812,25 +812,43 @@ export default function HomePage() {
       </section>
 
       {/* 08 — FOR SCHOOLS & INSTITUTIONS */}
-      <section id="schools" className="px-6 py-16 md:py-24 bg-[#FAF9F6]/40 border-b border-brand-border">
+      <section id="schools" className="px-6 py-10 md:py-12 bg-brand-secondary text-white border-b border-brand-border">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl mb-16 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-primary font-display">For Schools & Institutions</span>
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-primary/65 block font-display">FOR SCHOOLS & INSTITUTIONS</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-secondary font-display">
-              Invest in Teachers Who Keep Growing.
-            </h2>
-            <p className="text-lg md:text-xl text-brand-text/75 leading-relaxed font-body">
-              Give your teaching faculty access to a continuous professional-development experience designed around teachers' real working schedules.
-            </p>
-            <p className="text-sm md:text-base text-brand-text/70 leading-relaxed font-body">
-              Through SATIC CPD, teachers stay connected to professional learning through 10-Minute Practice during the week, SATIC Teachers' Talk every Saturday and focused professional practice throughout the year.
-            </p>
+          
+          {/* Top Intro Section with Image */}
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-10">
+            {/* Left Column: Heading and Description */}
+            <div className="w-full lg:w-[58%] space-y-4">
+              <h2 className="text-3xl md:text-5xl font-black font-display uppercase tracking-tight text-brand-accent">
+                For Schools & Institutions
+              </h2>
+              <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-white font-display leading-[1.2]">
+                Invest in Teachers Who Keep Growing.
+              </h3>
+              <p className="text-sm md:text-base text-white/80 leading-relaxed font-body">
+                Give your teaching faculty access to a continuous professional-development experience designed around teachers' real working schedules.
+              </p>
+              <p className="text-sm md:text-base text-white/70 leading-relaxed font-body">
+                Through SATIC CPD, teachers stay connected to professional learning through 10-Minute Practice during the week, SATIC Teachers' Talk every Saturday and focused professional practice throughout the year.
+              </p>
+            </div>
+            
+            {/* Right Column: School & Teachers Team Image */}
+            <div className="w-full lg:w-[38%] flex justify-center">
+              <Image
+                src="/school-teachers-team.png"
+                alt="Indian school building and diverse teachers standing together"
+                width={400}
+                height={400}
+                className="w-full h-auto max-w-[340px] md:max-w-[380px] lg:max-w-[400px] rounded-[1.75rem] border border-white/10 shadow-lg"
+                priority
+              />
+            </div>
           </div>
 
           {/* What Your Teachers Get Grid */}
-          <div className="mb-16">
-            <h3 className="text-lg font-bold text-brand-secondary uppercase tracking-wider mb-8 font-display">What Your Teachers Get</h3>
+          <div className="mb-10">
+            <h3 className="text-lg font-bold text-brand-accent uppercase tracking-wider mb-6 font-display">What Your Teachers Get</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { title: "10-Minute Practice", desc: "Short, practical professional-development activities from Monday to Friday." },
@@ -840,7 +858,7 @@ export default function HomePage() {
                 { title: "Progress Tracking", desc: "A structured record of each teacher's professional-development journey." },
                 { title: "Digital Certificates", desc: "Recognition for successfully completing eligible Practice Batches." }
               ].map((item, i) => (
-                <div key={i} className="bg-white border border-brand-border rounded-xl p-5 md:p-6 shadow-xs flex flex-col justify-between">
+                <div key={i} className="bg-white border border-brand-border rounded-xl p-5 md:p-6 shadow-xs flex flex-col justify-between text-brand-secondary">
                   <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display mb-1">{item.title}</h4>
                   <p className="text-sm md:text-base text-brand-text/75 leading-relaxed font-body">{item.desc}</p>
                 </div>
@@ -851,7 +869,7 @@ export default function HomePage() {
           {/* Bring SATIC CPD CTA Box & Contact Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             {/* Box Callout */}
-            <div className="lg:col-span-7 bg-brand-secondary text-white rounded-3xl p-6 md:p-10 shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div className="lg:col-span-7 bg-white/5 border border-white/10 text-white rounded-3xl p-6 md:p-8 shadow-sm relative overflow-hidden flex flex-col justify-between">
               <div className="absolute -top-10 -left-10 h-32 w-32 rounded-full bg-brand-primary opacity-25"></div>
               <div className="relative z-10 space-y-4">
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-accent font-display">Bring SATIC CPD to Your Teaching Faculty</span>
@@ -865,14 +883,14 @@ export default function HomePage() {
 
               <button
                 onClick={() => setIsEnquiryOpen(true)}
-                className="relative z-10 w-full md:w-fit bg-brand-primary hover:bg-[#1a4fbd] text-white py-3 px-8 rounded-xl font-bold text-xs uppercase tracking-widest transition-premium mt-8 font-display shadow-md"
+                className="relative z-10 w-full md:w-fit bg-brand-primary hover:bg-[#1a4fbd] text-white py-3 px-8 rounded-xl font-bold text-xs uppercase tracking-widest transition-premium mt-6 font-display shadow-md"
               >
                 Enquire for Your School →
               </button>
             </div>
 
             {/* Contact Details box */}
-            <div className="lg:col-span-5 bg-white border border-brand-border rounded-3xl p-6 md:p-8 flex flex-col justify-between items-center text-center shadow-xs">
+            <div className="lg:col-span-5 bg-white border border-transparent rounded-3xl p-6 md:p-8 flex flex-col justify-between items-center text-center shadow-xs text-brand-secondary">
               <div className="space-y-4 flex flex-col items-center w-full">
                 <span className="text-xs font-bold uppercase tracking-wider text-brand-primary font-display block">Speak With SATIC</span>
 
