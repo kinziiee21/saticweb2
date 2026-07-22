@@ -603,30 +603,27 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-            </div>
-
-          </div>
-        </div>
-
-        {/* Part B: Testimonials (Visible on Scroll) */}
+               {/* Part B: Testimonials (Visible on Scroll) */}
         <div className="px-6 py-12 md:py-16 bg-[#FAF9F6]/20 border-t border-brand-border/40">
           <div className="mx-auto max-w-7xl w-full">
-            <h3 className="text-xs font-bold text-brand-secondary uppercase tracking-widest text-center mb-6 font-display">What Teachers Say</h3>
+            <h3 className="text-2xl md:text-3xl font-extrabold text-brand-secondary tracking-tight text-center mb-8 font-display">What Teachers Say</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {[
                 { quote: "Every Saturday session is a breath of fresh air. Discussing real classroom struggles with peer educators gives me practical solutions for Monday morning.", name: "Amit Sharma", detail: "Physics Teacher, Ahmedabad" },
                 { quote: "The 30-minute format is perfect. It's concise, high-impact, and directly focuses on what actually works in Indian classrooms.", name: "Priya Deshmukh", detail: "Primary Teacher, Surat" },
                 { quote: "Hearing different perspectives from teachers across India during the live talk has been immensely helpful for my classroom engagement.", name: "Ketan Mehta", detail: "Math Teacher, Rajkot" }
               ].map((t, i) => (
-                <div key={i} className="bg-white border border-brand-border rounded-xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-premium">
-                  <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed italic font-body mb-3">&quot;{t.quote}&quot;</p>
+                <div key={i} className="bg-white border border-brand-border rounded-xl p-6 shadow-sm flex flex-col justify-between hover:shadow-md transition-premium">
+                  <p className="text-sm md:text-base text-brand-text/80 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
                   <div>
-                    <h5 className="font-bold text-brand-secondary text-sm font-display">{t.name}</h5>
-                    <span className="text-[11px] text-brand-text/50 block font-body mt-0.5">{t.detail}</span>
+                    <h5 className="font-bold text-brand-secondary text-sm md:text-base font-display">{t.name}</h5>
+                    <span className="text-xs md:text-sm text-brand-text/50 block font-body mt-1">{t.detail}</span>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+        </div>        </div>
           </div>
         </div>
       </section>
