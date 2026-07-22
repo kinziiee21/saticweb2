@@ -577,7 +577,7 @@ export default function HomePage() {
                     src="/teachers-talk-online.png"
                     alt="Indian teacher attending live online CPD Teachers' Talk seminar"
                     fill
-                    className="object-cover object-center rounded-[1.75rem]"
+                    className="object-contain rounded-[1.75rem]"
                     sizes="(max-width: 1024px) 100vw, 48vw"
                   />
                 </div>
