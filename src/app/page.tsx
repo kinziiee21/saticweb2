@@ -657,9 +657,11 @@ export default function HomePage() {
                   <circle cx="50" cy="50" r="32" fill="none" stroke="currentColor" strokeWidth="2.5" strokeDasharray="3 3" />
                   <circle cx="50" cy="50" r="20" fill="none" stroke="#F4B400" strokeWidth="3" />
                   <circle cx="50" cy="50" r="8" fill="currentColor" />
-                  <path d="M 82 18 L 54 46" stroke="#F4B400" strokeWidth="4.5" strokeLinecap="round" />
-                  <path d="M 78 14 L 86 14 L 86 22 Z" fill="#F4B400" />
-                  <path d="M 76 18 L 82 12 L 80 10 Z" fill="currentColor" />
+                  {/* Larger Dart shaft */}
+                  <path d="M 84 16 L 53 47" stroke="#F4B400" strokeWidth="7.5" strokeLinecap="round" />
+                  {/* Larger Flights */}
+                  <path d="M 78 12 L 92 12 L 92 26 Z" fill="#F4B400" />
+                  <path d="M 74 16 L 88 30 L 82 32 Z" fill="currentColor" />
                 </svg>
               </div>
             </div>
