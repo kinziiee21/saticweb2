@@ -20,6 +20,7 @@ import {
   Briefcase,
   Layers,
   ArrowDown,
+  ArrowUp,
   CheckCircle2,
   Calendar,
   GraduationCap
@@ -51,9 +52,26 @@ export default function HomePage() {
   const [isJoinOpen, setIsJoinOpen] = useState(false);
   const [isEnquiryOpen, setIsEnquiryOpen] = useState(false);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const teacherCount = useCountUp(1000);
   const schoolCount = useCountUp(50);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 400) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const toggleFaq = (index: number) => {
     setActiveFaq(activeFaq === index ? null : index);
@@ -148,12 +166,8 @@ export default function HomePage() {
 
           {/* Navigation links */}
           <nav className="hidden items-center gap-7 md:flex">
-            <a href="#benefits" className="text-xs font-bold uppercase tracking-wider text-brand-text/80 hover:text-brand-primary transition-colors focus:outline-none">Benefits</a>
             <a href="#cpd" className="text-xs font-bold uppercase tracking-wider text-brand-text/80 hover:text-brand-primary transition-colors focus:outline-none">SATIC CPD</a>
-            <a href="#practice" className="text-xs font-bold uppercase tracking-wider text-brand-text/80 hover:text-brand-primary transition-colors focus:outline-none">10-Min Practice</a>
-            <a href="#teachers-talk" className="text-xs font-bold uppercase tracking-wider text-brand-text/80 hover:text-brand-primary transition-colors focus:outline-none">Teachers' Talk</a>
             <a href="#focus-areas" className="text-xs font-bold uppercase tracking-wider text-brand-text/80 hover:text-brand-primary transition-colors focus:outline-none">Focus Areas</a>
-            <a href="#pricing" className="text-xs font-bold uppercase tracking-wider text-brand-text/80 hover:text-brand-primary transition-colors focus:outline-none">Pricing</a>
             <a href="#schools" className="text-xs font-bold uppercase tracking-wider text-brand-text/80 hover:text-brand-primary transition-colors focus:outline-none">For Schools</a>
 
             {/* Join SATIC CTA */}
@@ -1132,6 +1146,17 @@ export default function HomePage() {
         isOpen={isEnquiryOpen}
         onClose={() => setIsEnquiryOpen(false)}
       />
+
+      {/* Floating Scroll to Top button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-6 z-50 bg-brand-primary hover:bg-brand-secondary text-white p-3 rounded-full shadow-lg transition-premium cursor-pointer animate-in fade-in slide-in-from-bottom-4 duration-300 focus:outline-none border border-white/10"
+          aria-label="Scroll to Top"
+        >
+          <ArrowUp size={20} />
+        </button>
+      )}
 
     </div>
   );
