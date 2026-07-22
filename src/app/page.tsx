@@ -571,7 +571,7 @@ export default function HomePage() {
               </div>
 
               {/* Right Column: Seminar Picture (Full Square View - Unclipped) */}
-              <div className="w-full lg:w-[48%] flex justify-center">
+              <div className="w-full lg:w-[48%] flex justify-center lg:pt-8">
                 <Image
                   src="/teachers-talk-online.png"
                   alt="Indian teacher attending live online CPD Teachers' Talk seminar"
