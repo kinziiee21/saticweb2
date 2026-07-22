@@ -1017,45 +1017,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="px-6 py-20 bg-brand-secondary text-white relative overflow-hidden text-center border-t border-brand-secondary">
-        <div className="absolute -top-12 -left-12 h-32 w-32 rounded-full bg-brand-primary opacity-10"></div>
-        <div className="absolute -bottom-12 -right-12 h-40 w-40 rounded-full bg-brand-accent opacity-10"></div>
-
-        <div className="max-w-4xl mx-auto space-y-6 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-black font-display">A Professional Home for Every Teacher.</h2>
-
-          <div className="text-base md:text-lg text-white/80 space-y-1 font-body">
-            <p>For teachers who keep learning.</p>
-            <p>For teachers who keep practising.</p>
-            <p>For teachers who keep growing.</p>
-            <p className="font-semibold text-brand-accent mt-2">And for schools that invest in them.</p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-6 font-display text-xs md:text-sm uppercase tracking-wider font-bold">
-            <button
-              onClick={() => setIsJoinOpen(true)}
-              className="bg-brand-primary hover:bg-white hover:text-brand-secondary text-white py-4 px-8 rounded-full shadow-lg transition-premium cursor-pointer"
-            >
-              Join SATIC · ₹899/year →
-            </button>
-            <button
-              onClick={() => setIsEnquiryOpen(true)}
-              className="bg-white/10 hover:bg-white hover:text-brand-secondary text-white border border-white/20 py-4 px-8 rounded-full transition-premium cursor-pointer"
-            >
-              Enquire for Your School →
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-brand-secondary text-[#FAF8F2] border-t border-white/10 px-6 py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 mb-10">
 
             {/* Logo block */}
-            <div className="lg:col-span-5 space-y-4">
+            <div className="lg:col-span-4 space-y-4">
               <div className="bg-[#F8F5EC] px-3.5 py-2 rounded-lg border border-brand-border inline-block shadow-sm">
                 <Image
                   src="/satic-logo.png"
@@ -1066,7 +1034,7 @@ export default function HomePage() {
                   style={{ height: "auto" }}
                 />
               </div>
-              <p className="text-sm md:text-base text-white/70 max-w-sm leading-relaxed font-body">
+              <p className="text-sm text-white/70 max-w-xs leading-relaxed font-body">
                 SATIC — The Teachers' Club
                 <br />
                 A Professional Home for Every Teacher.
@@ -1084,34 +1052,61 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Let's Connect links */}
-            <div className="lg:col-span-3 space-y-3 font-body">
-              <h3 className="text-sm font-bold text-brand-accent uppercase tracking-wider">
-                Let's Connect
-              </h3>
-              <ul className="space-y-3 text-sm md:text-base text-white/80">
-                <li>
-                  <a href="mailto:joinsatic@gmail.com" className="hover:text-white transition-colors block">
-                    joinsatic@gmail.com
-                  </a>
-                </li>
-                <li>
-                  <a href="https://wa.me/919409348046" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors block">
-                    +91 94093 48046
-                  </a>
-                </li>
-              </ul>
+            {/* Center Compact CTA Block */}
+            <div className="lg:col-span-5 space-y-4 text-center lg:text-left flex flex-col justify-between border-t lg:border-t-0 lg:border-x border-white/10 py-6 lg:py-0 lg:px-8">
+              <div className="space-y-2">
+                <h3 className="text-lg font-bold text-white font-display">A Professional Home for Every Teacher</h3>
+                <div className="text-xs text-white/70 space-y-1 font-body">
+                  <p>For teachers who keep learning, practising, growing.</p>
+                  <p className="font-semibold text-brand-accent">And for schools that invest in them.</p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 pt-2 font-display text-[10px] font-bold uppercase tracking-wider justify-center lg:justify-start">
+                <button
+                  onClick={() => setIsJoinOpen(true)}
+                  className="bg-brand-primary hover:bg-white hover:text-brand-secondary text-white py-2.5 px-4 rounded-xl shadow-md transition-premium cursor-pointer text-center"
+                >
+                  Join SATIC · ₹899/year →
+                </button>
+                <button
+                  onClick={() => setIsEnquiryOpen(true)}
+                  className="bg-white/10 hover:bg-white hover:text-brand-secondary text-white border border-white/20 py-2.5 px-4 rounded-xl transition-premium cursor-pointer text-center"
+                >
+                  Enquire for Your School →
+                </button>
+              </div>
             </div>
 
-            {/* Legal Block */}
-            <div className="lg:col-span-4 space-y-4 font-body">
-              <h3 className="text-sm font-bold text-brand-accent uppercase tracking-wider">
-                Policies & Terms
-              </h3>
-              <div className="text-xs md:text-sm text-white/80 space-x-4">
-                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-                <span>·</span>
-                <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
+            {/* Right Column: Stacked Connect & Legal Block */}
+            <div className="lg:col-span-3 flex flex-col space-y-8 lg:text-right lg:items-end justify-between">
+              {/* Let's Connect */}
+              <div className="space-y-2.5 font-body">
+                <h3 className="text-xs font-bold text-brand-accent uppercase tracking-wider">
+                  Let's Connect
+                </h3>
+                <ul className="space-y-1.5 text-xs md:text-sm text-white/80">
+                  <li>
+                    <a href="mailto:joinsatic@gmail.com" className="hover:text-white transition-colors block">
+                      joinsatic@gmail.com
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://wa.me/919409348046" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors block">
+                      +91 94093 48046
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Policies & Terms */}
+              <div className="space-y-2.5 font-body">
+                <h3 className="text-xs font-bold text-brand-accent uppercase tracking-wider">
+                  Policies & Terms
+                </h3>
+                <div className="text-xs text-white/80 flex flex-col lg:items-end space-y-1.5">
+                  <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                  <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
+                </div>
               </div>
             </div>
 
