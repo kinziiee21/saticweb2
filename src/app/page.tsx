@@ -749,15 +749,16 @@ export default function HomePage() {
       </section>
 
       {/* 07 — MEMBERSHIP & PRICING */}
-      <section id="pricing" className="px-6 py-16 md:py-24 bg-white border-b border-brand-border">
+      <section id="pricing" className="px-6 py-10 md:py-12 bg-white border-b border-brand-border">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl mb-16 text-center mx-auto space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-primary font-display">SATIC Membership</span>
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-primary/65 block font-display">SATIC TEACHER MEMBERSHIP</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-secondary font-display">
-              A Year of Continuous Professional Growth.
+          <div className="max-w-3xl mb-8 text-center mx-auto space-y-3">
+            <h2 className="text-3xl md:text-5xl font-black font-display uppercase tracking-tight text-brand-primary mb-3">
+              SΛTIC TEACHERS MEMBERSHIP
             </h2>
-            <p className="text-lg md:text-xl text-brand-text/75 leading-relaxed font-body">
+            <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-brand-secondary font-display">
+              A Year of Continuous Professional Growth.
+            </h3>
+            <p className="text-sm md:text-base text-brand-text/75 leading-relaxed font-body">
               Join SATIC — The Teachers' Club and get access to the complete SATIC CPD experience.
             </p>
           </div>
