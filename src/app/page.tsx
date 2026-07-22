@@ -156,9 +156,9 @@ export default function HomePage() {
             <Image
               src="/satic-logo.png"
               alt="SATIC Logo"
-              width={180}
-              height={54}
-              className="w-[130px] md:w-[175px] h-auto object-contain"
+              width={240}
+              height={72}
+              className="w-[160px] md:w-[220px] h-auto object-contain"
               style={{ height: "auto" }}
               priority
             />
@@ -1038,16 +1038,14 @@ export default function HomePage() {
 
             {/* Logo block */}
             <div className="lg:col-span-4 space-y-4">
-              <div className="bg-[#F8F5EC] px-3.5 py-2 rounded-lg border border-brand-border inline-block shadow-sm">
-                <Image
-                  src="/satic-logo.png"
-                  alt="SATIC Logo"
-                  width={180}
-                  height={54}
-                  className="w-[140px] md:w-[180px] h-auto object-contain"
-                  style={{ height: "auto" }}
-                />
-              </div>
+              <Image
+                src="/satic-logo.png"
+                alt="SATIC Logo"
+                width={240}
+                height={72}
+                className="w-[180px] md:w-[220px] lg:w-[240px] h-auto object-contain brightness-0 invert"
+                style={{ height: "auto" }}
+              />
               <p className="text-sm text-white/70 max-w-xs leading-relaxed font-body">
                 SATIC — The Teachers' Club
                 <br />
