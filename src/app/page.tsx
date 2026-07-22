@@ -117,13 +117,13 @@ export default function HomePage() {
     {
       q: "Can schools enrol multiple teachers?",
       a: "Yes. Schools and institutions interested in enrolling their teaching faculty can contact SATIC for information about special institutional membership options.",
-      linkTarget: "#schools",
-      linkLabel: "View School Plans"
+      modalAction: "enquiry",
+      linkLabel: "Enquire for Your School"
     },
     {
       q: "How can my school get started?",
       a: "Complete the institutional enquiry form or contact the SATIC team directly. Our team will connect with your school to explain the SATIC CPD experience and discuss the enrolment process.",
-      linkTarget: "#schools",
+      modalAction: "enquiry",
       linkLabel: "Get Started for Schools"
     }
   ];
@@ -979,15 +979,33 @@ export default function HomePage() {
                 >
                   <div className="p-5 text-sm md:text-base text-brand-text/70 leading-relaxed font-body bg-[#faf9f6]/30 space-y-3">
                     <p>{faq.a}</p>
-                    {faq.linkTarget && (
+                    {(faq.linkTarget || faq.modalAction) && (
                       <div className="pt-2">
-                        <a
-                          href={faq.linkTarget}
-                          className="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-primary hover:text-brand-secondary uppercase tracking-wider transition-premium focus:outline-none"
-                        >
-                          <span>{faq.linkLabel || "Explore Section"}</span>
-                          <ArrowRight size={12} className="shrink-0" />
-                        </a>
+                        {faq.modalAction === "enquiry" ? (
+                          <button
+                            onClick={() => setIsEnquiryOpen(true)}
+                            className="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-primary hover:text-brand-secondary uppercase tracking-wider transition-premium focus:outline-none cursor-pointer bg-transparent border-none p-0"
+                          >
+                            <span>{faq.linkLabel || "Enquire Now"}</span>
+                            <ArrowRight size={12} className="shrink-0" />
+                          </button>
+                        ) : faq.modalAction === "join" ? (
+                          <button
+                            onClick={() => setIsJoinOpen(true)}
+                            className="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-primary hover:text-brand-secondary uppercase tracking-wider transition-premium focus:outline-none cursor-pointer bg-transparent border-none p-0"
+                          >
+                            <span>{faq.linkLabel || "Join Now"}</span>
+                            <ArrowRight size={12} className="shrink-0" />
+                          </button>
+                        ) : (
+                          <a
+                            href={faq.linkTarget}
+                            className="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-primary hover:text-brand-secondary uppercase tracking-wider transition-premium focus:outline-none"
+                          >
+                            <span>{faq.linkLabel || "Explore Section"}</span>
+                            <ArrowRight size={12} className="shrink-0" />
+                          </a>
+                        )}
                       </div>
                     )}
                   </div>
