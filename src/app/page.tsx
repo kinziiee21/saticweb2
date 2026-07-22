@@ -550,29 +550,29 @@ export default function HomePage() {
       <section id="teachers-talk" className="bg-white border-b border-brand-border">
         
         {/* Part A: Main Content & Topics (1 Viewport Screen on Desktop) */}
-        <div className="px-6 lg:h-screen lg:min-h-[680px] lg:max-h-[880px] flex items-center relative overflow-hidden">
+        <div className="px-6 lg:h-screen lg:min-h-[700px] lg:max-h-[920px] flex items-center relative overflow-hidden">
           <div className="mx-auto max-w-7xl w-full flex flex-col justify-center py-4">
             
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-6">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-8">
 
               {/* Left Column: Heading and Description */}
-              <div className="w-full lg:w-[48%] space-y-4">
+              <div className="w-full lg:w-[48%] space-y-6">
                 <div>
-                  <h2 className="text-3xl md:text-4xl font-black font-display uppercase tracking-tight mb-2">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-display uppercase tracking-tight mb-2">
                     <span className="text-brand-primary">SΛTIC</span> <span className="text-brand-secondary font-semibold">Teachers' Talk</span>
                   </h2>
-                  <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-brand-secondary font-display leading-[1.2]">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-brand-secondary font-display leading-[1.2]">
                     Learn Together. Discuss What Matters.
                   </h3>
                 </div>
-                <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed font-body">
+                <p className="text-sm md:text-base lg:text-lg text-brand-text/80 leading-relaxed font-body">
                   SATIC Teachers' Talk is the live learning component of the SATIC CPD experience. Teachers come together with speakers, experts and fellow educators to explore practical ideas, discuss professional challenges and discover approaches relevant to their professional lives.
                 </p>
               </div>
 
               {/* Right Column: Seminar Picture (Full 4/3 View) */}
               <div className="w-full lg:w-[48%] flex justify-center">
-                <div className="relative aspect-[4/3] w-full max-h-[280px] md:max-h-[320px] rounded-[1.5rem] overflow-hidden border border-brand-border shadow-lg">
+                <div className="relative aspect-[4/3] w-full max-h-[340px] md:max-h-[380px] lg:max-h-[420px] rounded-[1.75rem] overflow-hidden border border-brand-border shadow-lg">
                   <Image
                     src="/teachers-talk-online.png"
                     alt="Indian teacher attending live online CPD Teachers' Talk seminar"
@@ -586,9 +586,9 @@ export default function HomePage() {
             </div>
 
             {/* Topics We Explore List Layout */}
-            <div className="bg-[#FAF9F6]/40 border border-brand-border rounded-3xl p-4 md:p-5 shadow-xs">
-              <h3 className="text-xs font-bold text-brand-secondary uppercase tracking-widest mb-3 font-display text-center">Your Teachers' Talk Topics</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2 max-w-5xl mx-auto">
+            <div className="bg-[#FAF9F6]/40 border border-brand-border rounded-3xl p-5 md:p-6 shadow-xs">
+              <h3 className="text-sm font-bold text-brand-secondary uppercase tracking-widest mb-4 font-display text-center">Your Teachers' Talk Topics</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3 max-w-5xl mx-auto">
                 {[
                   "AI Tools Every Teacher Should Know",
                   "What Is STEM Education?",
@@ -597,9 +597,9 @@ export default function HomePage() {
                   "Teacher Productivity & Digital Tools",
                   "Career Growth for Teachers"
                 ].map((topic, i) => (
-                  <div key={i} className="flex items-center gap-2 py-1 px-2 hover:bg-brand-bg/25 rounded-lg transition-premium">
-                    <span className="text-[10px] font-bold text-brand-primary font-display">0{i+1}</span>
-                    <span className="text-xs md:text-sm font-semibold text-brand-secondary font-display leading-tight">{topic}</span>
+                  <div key={i} className="flex items-center gap-2.5 py-1.5 px-2.5 hover:bg-brand-bg/25 rounded-lg transition-premium">
+                    <span className="text-xs md:text-sm font-bold text-brand-primary font-display">0{i+1}</span>
+                    <span className="text-sm md:text-base font-semibold text-brand-secondary font-display leading-tight">{topic}</span>
                   </div>
                 ))}
               </div>
