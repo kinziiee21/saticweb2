@@ -550,7 +550,7 @@ export default function HomePage() {
       <section id="teachers-talk" className="bg-white border-b border-brand-border pt-12 md:pt-16">
         
         {/* Part A: Main Content & Topics (1 Viewport Screen on Desktop) */}
-        <div className="px-6 lg:h-[80vh] lg:min-h-[580px] lg:max-h-[780px] flex items-center relative overflow-hidden">
+        <div className="px-6 lg:h-[88vh] lg:min-h-[660px] lg:max-h-[860px] flex items-center relative overflow-hidden">
           <div className="mx-auto max-w-7xl w-full flex flex-col justify-center py-4">
             
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-8">
