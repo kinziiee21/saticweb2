@@ -721,7 +721,7 @@ export default function HomePage() {
               <div key={i} className={`${focus.bgClass} border rounded-2xl p-6 md:p-8 shadow-xs flex flex-col justify-between hover:scale-[1.02] transition-premium`}>
                 <div>
                   <div className="flex justify-between items-center mb-4">
-                    <span className={`text-[10px] font-bold tracking-widest ${focus.tagText} uppercase`}>Focus Area {focus.id}</span>
+                    <span className={`text-xs font-bold tracking-widest ${focus.tagText} uppercase`}>Focus Area {focus.id}</span>
                     <span className={`text-xl font-black font-display ${focus.numberText}`}>{focus.id}</span>
                   </div>
                   <h3 className="text-xl font-bold font-display mb-2">{focus.area}</h3>
