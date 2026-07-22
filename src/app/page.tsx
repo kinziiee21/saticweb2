@@ -154,11 +154,11 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 md:py-4.5 lg:px-8">
           <a href="#" className="flex items-center focus:outline-none" aria-label="SATIC Home">
             <Image
-              src="/satic-logo.png"
+              src="C:\Users\kinza\saticweb4\public\satic-logo.png"
               alt="SATIC Logo"
-              width={240}
-              height={72}
-              className="w-[160px] md:w-[220px] h-auto object-contain"
+              width={180}
+              height={54}
+              className="w-[130px] md:w-[175px] h-auto object-contain"
               style={{ height: "auto" }}
               priority
             />
@@ -584,11 +584,11 @@ export default function HomePage() {
 
       {/* 05 — SATIC TEACHERS' TALK */}
       <section id="teachers-talk" className="bg-white border-b border-brand-border pt-12 md:pt-16">
-        
+
         {/* Part A: Main Content & Topics (1 Viewport Screen on Desktop) */}
         <div className="px-6 lg:h-[88vh] lg:min-h-[660px] lg:max-h-[860px] flex items-center relative overflow-hidden">
           <div className="mx-auto max-w-7xl w-full flex flex-col justify-center py-4">
-            
+
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-8">
 
               {/* Left Column: Heading and Description */}
@@ -634,7 +634,7 @@ export default function HomePage() {
                   "Career Growth for Teachers"
                 ].map((topic, i) => (
                   <div key={i} className="flex items-center gap-2.5 py-1.5 px-2.5 hover:bg-brand-bg/25 rounded-lg transition-premium">
-                    <span className="text-xs md:text-sm font-bold text-brand-primary font-display">0{i+1}</span>
+                    <span className="text-xs md:text-sm font-bold text-brand-primary font-display">0{i + 1}</span>
                     <span className="text-sm md:text-base font-semibold text-brand-secondary font-display leading-tight">{topic}</span>
                   </div>
                 ))}
@@ -670,7 +670,7 @@ export default function HomePage() {
       {/* 06 — SATIC CPD FOCUS AREAS */}
       <section id="focus-areas" className="px-6 py-10 md:py-12 bg-[#FAF9F6]/40 border-b border-brand-border">
         <div className="mx-auto max-w-7xl">
-          
+
           {/* Header Block */}
           <div className="flex flex-col lg:flex-row items-center justify-start gap-8 lg:gap-16 mb-10">
             <div className="w-full lg:w-[70%] space-y-3">
@@ -684,7 +684,7 @@ export default function HomePage() {
                 SATIC CPD focuses on four areas that influence a teacher's effectiveness in the classroom, relationships within the school community, everyday productivity and long-term professional growth.
               </p>
             </div>
-            
+
             {/* Focus/Target Graphic (Dart board) */}
             <div className="w-full lg:w-auto flex justify-center">
               <div className="relative flex items-center justify-center w-24 h-24 md:w-28 md:h-28 bg-brand-primary/5 rounded-3xl border border-brand-primary/10 shadow-sm p-4 text-brand-primary">
@@ -705,10 +705,10 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             {[
-              { 
-                id: "01", 
-                area: "Classroom Management", 
-                desc: "Building effective, engaging and positive learning environments.", 
+              {
+                id: "01",
+                area: "Classroom Management",
+                desc: "Building effective, engaging and positive learning environments.",
                 bullets: ["Student Engagement", "Classroom Communication", "Teaching Practices", "Activity-Based Learning", "Assessment & Feedback", "Managing Classroom Challenges"],
                 bgClass: "bg-[#EAF7EE] border-[#C8EAD1] text-[#1E4E2C]",
                 subText: "text-[#1E4E2C]/75",
@@ -717,10 +717,10 @@ export default function HomePage() {
                 tagText: "text-[#1E4E2C]/70",
                 iconColor: "#1E4E2C"
               },
-              { 
-                id: "02", 
-                area: "Parent Engagement", 
-                desc: "Building stronger and more professional relationships between teachers and parents.", 
+              {
+                id: "02",
+                area: "Parent Engagement",
+                desc: "Building stronger and more professional relationships between teachers and parents.",
                 bullets: ["Effective Parent Communication", "Parent-Teacher Meetings", "Communicating Student Progress", "Managing Expectations", "Difficult Conversations", "Building Parent Partnerships"],
                 bgClass: "bg-[#FFF9E6] border-[#FCE395] text-[#6D5000]",
                 subText: "text-[#6D5000]/75",
@@ -729,10 +729,10 @@ export default function HomePage() {
                 tagText: "text-[#6D5000]/70",
                 iconColor: "#6D5000"
               },
-              { 
-                id: "03", 
-                area: "Teacher Productivity", 
-                desc: "Helping teachers use their time, tools and technology more effectively.", 
+              {
+                id: "03",
+                area: "Teacher Productivity",
+                desc: "Helping teachers use their time, tools and technology more effectively.",
                 bullets: ["AI Tools for Teachers", "Digital Teaching Tools", "Lesson & Content Planning", "Time Management", "Smarter Professional Workflows", "Personal Organisation"],
                 bgClass: "bg-[#EBF1FF] border-[#C7D7F7] text-[#123A8F]",
                 subText: "text-[#123A8F]/75",
@@ -741,10 +741,10 @@ export default function HomePage() {
                 tagText: "text-[#123A8F]/70",
                 iconColor: "#123A8F"
               },
-              { 
-                id: "04", 
-                area: "Career Development", 
-                desc: "Supporting teachers in their continued professional and career growth.", 
+              {
+                id: "04",
+                area: "Career Development",
+                desc: "Supporting teachers in their continued professional and career growth.",
                 bullets: ["Professional Skills", "Communication Skills", "Leadership Development", "Continuous Learning", "Career Opportunities", "Building a Professional Profile"],
                 bgClass: "bg-[#F5EFFF] border-[#DFD3F7] text-[#4A1E8F]",
                 subText: "text-[#4A1E8F]/75",
@@ -850,7 +850,7 @@ export default function HomePage() {
       {/* 08 — FOR SCHOOLS & INSTITUTIONS */}
       <section id="schools" className="px-6 py-10 md:py-12 bg-brand-secondary text-white border-b border-brand-border">
         <div className="mx-auto max-w-7xl">
-          
+
           {/* Top Intro Section with Image */}
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-10">
             {/* Left Column: Heading and Description */}
@@ -868,7 +868,7 @@ export default function HomePage() {
                 Through SATIC CPD, teachers stay connected to professional learning through 10-Minute Practice during the week, SATIC Teachers' Talk every Saturday and focused professional practice throughout the year.
               </p>
             </div>
-            
+
             {/* Right Column: School & Teachers Team Image */}
             <div className="w-full lg:w-[38%] flex justify-center">
               <Image
@@ -1038,14 +1038,16 @@ export default function HomePage() {
 
             {/* Logo block */}
             <div className="lg:col-span-4 space-y-4">
-              <Image
-                src="/satic-logo.png"
-                alt="SATIC Logo"
-                width={240}
-                height={72}
-                className="w-[180px] md:w-[220px] lg:w-[240px] h-auto object-contain brightness-0 invert"
-                style={{ height: "auto" }}
-              />
+              <div className="bg-[#F8F5EC] px-3.5 py-2 rounded-lg border border-brand-border inline-block shadow-sm">
+                <Image
+                  src="/satic-logo.png"
+                  alt="SATIC Logo"
+                  width={180}
+                  height={54}
+                  className="w-[140px] md:w-[180px] h-auto object-contain"
+                  style={{ height: "auto" }}
+                />
+              </div>
               <p className="text-sm text-white/70 max-w-xs leading-relaxed font-body">
                 SATIC — The Teachers' Club
                 <br />
