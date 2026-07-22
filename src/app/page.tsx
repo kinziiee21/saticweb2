@@ -154,7 +154,7 @@ export default function HomePage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 md:py-4.5 lg:px-8">
           <a href="#" className="flex items-center focus:outline-none" aria-label="SATIC Home">
             <Image
-              src="C:\Users\kinza\saticweb4\public\satic-logo.png"
+              src="/satic-logo.png"
               alt="SATIC Logo"
               width={180}
               height={54}
