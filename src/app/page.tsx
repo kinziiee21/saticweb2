@@ -547,7 +547,7 @@ export default function HomePage() {
       </section>
 
       {/* 05 — SATIC TEACHERS' TALK */}
-      <section id="teachers-talk" className="bg-white border-b border-brand-border">
+      <section id="teachers-talk" className="bg-white border-b border-brand-border pt-12 md:pt-16">
         
         {/* Part A: Main Content & Topics (1 Viewport Screen on Desktop) */}
         <div className="px-6 lg:h-[80vh] lg:min-h-[580px] lg:max-h-[780px] flex items-center relative overflow-hidden">
