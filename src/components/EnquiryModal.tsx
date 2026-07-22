@@ -202,7 +202,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-semibold text-satic-charcoal/85 mb-1">Expected Faculty Size (Teachers to Enroll)</label>
+                  <label className="block text-[11px] font-semibold text-satic-charcoal/85 mb-1">Faculty Size of Your School</label>
                   <select 
                     name="numTeachers"
                     value={formData.numTeachers}
@@ -218,7 +218,7 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
 
                 <div className="bg-satic-blue/[0.03] border border-satic-blue/10 rounded-lg p-3 flex items-start space-x-2 text-[10px] text-satic-navy/85 mt-2">
                   <ShieldCheck size={16} className="text-satic-blue shrink-0 mt-0.5" />
-                  <p>Our outreach associate will get in touch with you over WhatsApp / Email within 24 hours to guide you through customized onboarding, batch scheduling, and dashboards.</p>
+                  <p>Our outreach associate will get in touch with you over WhatsApp / Call within 24 hours to guide you more about SATIC.</p>
                 </div>
 
                 {apiError && (
@@ -246,9 +246,9 @@ export default function EnquiryModal({ isOpen, onClose }: EnquiryModalProps) {
               <div className="w-14 h-14 bg-emerald-500/10 border-2 border-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-5 animate-bounce">
                 <Check size={28} className="text-emerald-500 stroke-[3px]" />
               </div>
-              <h2 className="text-2xl font-bold font-display text-satic-navy mb-2">Enquiry Submitted!</h2>
+              <h2 className="text-2xl font-bold font-display text-satic-navy mb-2">Successfully submitted</h2>
               <p className="text-satic-charcoal/70 text-sm max-w-sm mx-auto mb-6 font-body">
-                Thank you for your interest in SATIC. Our outreach partner will reach out to you within 24 hours to discuss the implementation details.
+                We will contact you soon.
               </p>
               <button 
                 onClick={handleClose}
