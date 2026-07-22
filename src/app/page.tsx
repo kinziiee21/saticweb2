@@ -62,47 +62,69 @@ export default function HomePage() {
   const faqData = [
     {
       q: "What is SATIC?",
-      a: "SATIC — The Teachers' Club is a professional community built around the continuous learning, practice and professional growth of teachers."
+      a: "SATIC — The Teachers' Club is a professional community built around the continuous learning, practice and professional growth of teachers.",
+      linkTarget: "#benefits",
+      linkLabel: "View SATIC Benefits"
     },
     {
       q: "What is SATIC CPD?",
-      a: "SATIC CPD is SATIC's continuous professional-development experience. It combines short 10-Minute Practice activities during the week, weekly SATIC Teachers' Talk sessions and focused professional Practice Batches."
+      a: "SATIC CPD is SATIC's continuous professional-development experience. It combines short 10-Minute Practice activities during the week, weekly SATIC Teachers' Talk sessions and focused professional Practice Batches.",
+      linkTarget: "#cpd",
+      linkLabel: "Explore SATIC CPD"
     },
     {
       q: "Who can join SATIC?",
-      a: "SATIC is designed primarily for school teachers who want to continue developing their professional skills and stay connected to ongoing professional learning."
+      a: "SATIC is designed primarily for school teachers who want to continue developing their professional skills and stay connected to ongoing professional learning.",
+      linkTarget: "#pricing",
+      linkLabel: "Join SATIC Today"
     },
     {
       q: "How does the 10-Minute Practice work?",
-      a: "Teachers receive a short professional practice activity designed to take approximately 10 minutes. They can complete it around their schedule, submit their work, receive reviews, earn Practice Points and track their progress."
+      a: "Teachers receive a short professional practice activity designed to take approximately 10 minutes. They can complete it around their schedule, submit their work, receive reviews, earn Practice Points and track their progress.",
+      linkTarget: "#practice",
+      linkLabel: "See 10-Minute Practice"
     },
     {
       q: "Do I need to complete the practice at a fixed time?",
-      a: "No. The 10-Minute Practice is designed to be flexible. Teachers can complete and submit activities according to the schedule and submission requirements of their Practice Batch."
+      a: "No. The 10-Minute Practice is designed to be flexible. Teachers can complete and submit activities according to the schedule and submission requirements of their Practice Batch.",
+      linkTarget: "#practice",
+      linkLabel: "View 10-Minute Practice"
     },
     {
       q: "What is SATIC Teachers' Talk?",
-      a: "SATIC Teachers' Talk is the live learning component of SATIC CPD. These 30-minute sessions bring teachers together to explore relevant professional topics, learn from speakers and participate in professional discussions."
+      a: "SATIC Teachers' Talk is the live learning component of SATIC CPD. These 30-minute sessions bring teachers together to explore relevant professional topics, learn from speakers and participate in professional discussions.",
+      linkTarget: "#teachers-talk",
+      linkLabel: "Go to Teachers' Talk"
     },
     {
       q: "What topics does SATIC CPD cover?",
-      a: "SATIC CPD is built around four main focus areas: Classroom Management, Parent Engagement, Teacher Productivity and Career Development. Specific Practice Batches and Teachers' Talk sessions explore topics within these areas."
+      a: "SATIC CPD is built around four main focus areas: Classroom Management, Parent Engagement, Teacher Productivity and Career Development. Specific Practice Batches and Teachers' Talk sessions explore topics within these areas.",
+      linkTarget: "#focus-areas",
+      linkLabel: "View Focus Areas"
     },
     {
       q: "Will I receive a certificate?",
-      a: "Digital certificates may be awarded for successfully completing eligible Practice Batches according to their completion criteria."
+      a: "Digital certificates may be awarded for successfully completing eligible Practice Batches according to their completion criteria.",
+      linkTarget: "#pricing",
+      linkLabel: "See Membership Benefits"
     },
     {
       q: "How much does SATIC membership cost?",
-      a: "Individual SATIC membership costs ₹899 per year, giving members access to the SATIC CPD experience and included membership benefits."
+      a: "Individual SATIC membership costs ₹899 per year, giving members access to the SATIC CPD experience and included membership benefits.",
+      linkTarget: "#pricing",
+      linkLabel: "View Individual Plan"
     },
     {
       q: "Can schools enrol multiple teachers?",
-      a: "Yes. Schools and institutions interested in enrolling their teaching faculty can contact SATIC for information about special institutional membership options."
+      a: "Yes. Schools and institutions interested in enrolling their teaching faculty can contact SATIC for information about special institutional membership options.",
+      linkTarget: "#schools",
+      linkLabel: "View School Plans"
     },
     {
       q: "How can my school get started?",
-      a: "Complete the institutional enquiry form or contact the SATIC team directly. Our team will connect with your school to explain the SATIC CPD experience and discuss the enrolment process."
+      a: "Complete the institutional enquiry form or contact the SATIC team directly. Our team will connect with your school to explain the SATIC CPD experience and discuss the enrolment process.",
+      linkTarget: "#schools",
+      linkLabel: "Get Started for Schools"
     }
   ];
 
@@ -921,10 +943,10 @@ export default function HomePage() {
       </section>
 
       {/* 09 — FREQUENTLY ASKED QUESTIONS */}
-      <section id="faq" className="py-20 md:py-28 bg-[#F8F5EC]/20 border-t border-brand-border">
+      <section id="faq" className="py-10 md:py-12 bg-[#F8F5EC]/20 border-t border-brand-border">
         <div className="max-w-3xl mx-auto px-6">
 
-          <div className="text-center mb-16 space-y-3">
+          <div className="text-center mb-8 space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-brand-primary font-display">Frequently Asked Questions</span>
             <h2 className="text-3xl md:text-4xl font-extrabold font-display text-brand-secondary">
               Have Questions About SATIC?
@@ -955,8 +977,19 @@ export default function HomePage() {
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${activeFaq === idx ? "max-h-[300px] border-t border-brand-border/40" : "max-h-0"
                     }`}
                 >
-                  <div className="p-5 text-sm md:text-base text-brand-text/70 leading-relaxed font-body bg-[#faf9f6]/30">
-                    {faq.a}
+                  <div className="p-5 text-sm md:text-base text-brand-text/70 leading-relaxed font-body bg-[#faf9f6]/30 space-y-3">
+                    <p>{faq.a}</p>
+                    {faq.linkTarget && (
+                      <div className="pt-2">
+                        <a
+                          href={faq.linkTarget}
+                          className="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-primary hover:text-brand-secondary uppercase tracking-wider transition-premium focus:outline-none"
+                        >
+                          <span>{faq.linkLabel || "Explore Section"}</span>
+                          <ArrowRight size={12} className="shrink-0" />
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
