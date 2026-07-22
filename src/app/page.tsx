@@ -636,8 +636,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           
           {/* Header Block */}
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-10">
-            <div className="w-full lg:w-[72%] space-y-3">
+          <div className="flex flex-col lg:flex-row items-center justify-start gap-8 lg:gap-16 mb-10">
+            <div className="w-full lg:w-[70%] space-y-3">
               <h2 className="text-3xl md:text-5xl font-black font-display uppercase tracking-tight text-brand-accent">
                 SΛTIC CPD Focus Areas
               </h2>
@@ -650,7 +650,7 @@ export default function HomePage() {
             </div>
             
             {/* Focus/Target Graphic (Dart board) */}
-            <div className="w-full lg:w-[24%] flex justify-center lg:justify-end">
+            <div className="w-full lg:w-auto flex justify-center">
               <div className="relative flex items-center justify-center w-24 h-24 md:w-28 md:h-28 bg-brand-primary/5 rounded-3xl border border-brand-primary/10 shadow-sm p-4 text-brand-primary">
                 <svg viewBox="0 0 100 100" className="w-full h-full">
                   <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" strokeWidth="3.5" />
