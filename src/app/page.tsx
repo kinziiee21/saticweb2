@@ -547,81 +547,87 @@ export default function HomePage() {
       </section>
 
       {/* 05 — SATIC TEACHERS' TALK */}
-      <section id="teachers-talk" className="px-6 py-8 lg:py-0 bg-white border-b border-brand-border lg:h-screen lg:min-h-[700px] lg:max-h-[950px] flex items-center relative overflow-hidden">
-        <div className="mx-auto max-w-7xl w-full flex flex-col justify-center py-4">
-          
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-6">
+      <section id="teachers-talk" className="bg-white border-b border-brand-border">
+        
+        {/* Part A: Main Content & Topics (1 Viewport Screen on Desktop) */}
+        <div className="px-6 lg:h-screen lg:min-h-[680px] lg:max-h-[880px] flex items-center relative overflow-hidden">
+          <div className="mx-auto max-w-7xl w-full flex flex-col justify-center py-4">
+            
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-6">
 
-            {/* Left Column: Heading and Description */}
-            <div className="w-full lg:w-[48%] space-y-4">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-black font-display uppercase tracking-tight mb-2">
-                  <span className="text-brand-primary">SΛTIC</span> <span className="text-brand-secondary font-semibold">Teachers' Talk</span>
-                </h2>
-                <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-brand-secondary font-display leading-[1.2]">
-                  Learn Together. Discuss What Matters.
-                </h3>
-              </div>
-              <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed font-body">
-                SATIC Teachers' Talk is the live learning component of the SATIC CPD experience. Teachers come together with speakers, experts and fellow educators to explore practical ideas, discuss professional challenges and discover approaches relevant to their professional lives.
-              </p>
-            </div>
-
-            {/* Right Column: Seminar Picture */}
-            <div className="w-full lg:w-[48%]">
-              <div className="relative aspect-[21/9] sm:aspect-[3/1] lg:aspect-[3.2/1] rounded-2xl overflow-hidden border border-brand-border shadow-md">
-                <Image
-                  src="/teachers-talk-online.png"
-                  alt="Indian teacher attending live online CPD Teachers' Talk seminar"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 48vw"
-                />
-              </div>
-            </div>
-
-          </div>
-
-          {/* Topics We Explore List Layout */}
-          <div className="bg-[#FAF9F6]/40 border border-brand-border rounded-3xl p-4 md:p-5 shadow-xs mb-6">
-            <h3 className="text-xs font-bold text-brand-secondary uppercase tracking-widest mb-3 font-display text-center">Your Teachers' Talk Topics</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2 max-w-5xl mx-auto">
-              {[
-                "AI Tools Every Teacher Should Know",
-                "What Is STEM Education?",
-                "Modern Classroom Management",
-                "Communicating Effectively With Parents",
-                "Teacher Productivity & Digital Tools",
-                "Career Growth for Teachers"
-              ].map((topic, i) => (
-                <div key={i} className="flex items-center gap-2 py-1 px-2 hover:bg-brand-bg/25 rounded-lg transition-premium">
-                  <span className="text-[10px] font-bold text-brand-primary font-display">0{i+1}</span>
-                  <span className="text-xs md:text-sm font-semibold text-brand-secondary font-display leading-tight">{topic}</span>
+              {/* Left Column: Heading and Description */}
+              <div className="w-full lg:w-[48%] space-y-4">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-black font-display uppercase tracking-tight mb-2">
+                    <span className="text-brand-primary">SΛTIC</span> <span className="text-brand-secondary font-semibold">Teachers' Talk</span>
+                  </h2>
+                  <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-brand-secondary font-display leading-[1.2]">
+                    Learn Together. Discuss What Matters.
+                  </h3>
                 </div>
-              ))}
-            </div>
-          </div>
+                <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed font-body">
+                  SATIC Teachers' Talk is the live learning component of the SATIC CPD experience. Teachers come together with speakers, experts and fellow educators to explore practical ideas, discuss professional challenges and discover approaches relevant to their professional lives.
+                </p>
+              </div>
 
-          {/* Testimonials */}
-          <div>
-            <h3 className="text-xs font-bold text-brand-secondary uppercase tracking-widest text-center mb-3 font-display">What Teachers Say</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+              {/* Right Column: Seminar Picture (Full 4/3 View) */}
+              <div className="w-full lg:w-[48%] flex justify-center">
+                <div className="relative aspect-[4/3] w-full max-h-[280px] md:max-h-[320px] rounded-[1.5rem] overflow-hidden border border-brand-border shadow-lg">
+                  <Image
+                    src="/teachers-talk-online.png"
+                    alt="Indian teacher attending live online CPD Teachers' Talk seminar"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 48vw"
+                  />
+                </div>
+              </div>
+
+            </div>
+
+            {/* Topics We Explore List Layout */}
+            <div className="bg-[#FAF9F6]/40 border border-brand-border rounded-3xl p-4 md:p-5 shadow-xs">
+              <h3 className="text-xs font-bold text-brand-secondary uppercase tracking-widest mb-3 font-display text-center">Your Teachers' Talk Topics</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2 max-w-5xl mx-auto">
+                {[
+                  "AI Tools Every Teacher Should Know",
+                  "What Is STEM Education?",
+                  "Modern Classroom Management",
+                  "Communicating Effectively With Parents",
+                  "Teacher Productivity & Digital Tools",
+                  "Career Growth for Teachers"
+                ].map((topic, i) => (
+                  <div key={i} className="flex items-center gap-2 py-1 px-2 hover:bg-brand-bg/25 rounded-lg transition-premium">
+                    <span className="text-[10px] font-bold text-brand-primary font-display">0{i+1}</span>
+                    <span className="text-xs md:text-sm font-semibold text-brand-secondary font-display leading-tight">{topic}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Part B: Testimonials (Visible on Scroll) */}
+        <div className="px-6 py-12 md:py-16 bg-[#FAF9F6]/20 border-t border-brand-border/40">
+          <div className="mx-auto max-w-7xl w-full">
+            <h3 className="text-xs font-bold text-brand-secondary uppercase tracking-widest text-center mb-6 font-display">What Teachers Say</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {[
                 { quote: "Every Saturday session is a breath of fresh air. Discussing real classroom struggles with peer educators gives me practical solutions for Monday morning.", name: "Amit Sharma", detail: "Physics Teacher, Ahmedabad" },
                 { quote: "The 30-minute format is perfect. It's concise, high-impact, and directly focuses on what actually works in Indian classrooms.", name: "Priya Deshmukh", detail: "Primary Teacher, Surat" },
                 { quote: "Hearing different perspectives from teachers across India during the live talk has been immensely helpful for my classroom engagement.", name: "Ketan Mehta", detail: "Math Teacher, Rajkot" }
               ].map((t, i) => (
-                <div key={i} className="bg-white border border-brand-border rounded-xl p-4 shadow-xs flex flex-col justify-between hover:shadow-md transition-premium">
-                  <p className="text-[11px] md:text-xs text-brand-text/75 leading-relaxed italic font-body mb-2">&quot;{t.quote}&quot;</p>
+                <div key={i} className="bg-white border border-brand-border rounded-xl p-5 shadow-sm flex flex-col justify-between hover:shadow-md transition-premium">
+                  <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed italic font-body mb-3">&quot;{t.quote}&quot;</p>
                   <div>
-                    <h5 className="font-bold text-brand-secondary text-xs font-display">{t.name}</h5>
-                    <span className="text-[10px] text-brand-text/50 block font-body mt-0.5">{t.detail}</span>
+                    <h5 className="font-bold text-brand-secondary text-sm font-display">{t.name}</h5>
+                    <span className="text-[11px] text-brand-text/50 block font-body mt-0.5">{t.detail}</span>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
         </div>
       </section>
 
