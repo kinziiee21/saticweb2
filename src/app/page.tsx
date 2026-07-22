@@ -741,7 +741,7 @@ export default function HomePage() {
           </div>
 
           <div className="max-w-6xl w-full mx-auto mt-12 bg-brand-primary/[0.04] border border-brand-primary/10 rounded-2xl p-5 md:p-6 text-center shadow-xs">
-            <p className="text-base md:text-lg lg:text-xl font-bold text-brand-primary leading-relaxed font-display">
+            <p className="text-lg md:text-xl lg:text-2xl font-extrabold text-brand-primary leading-relaxed font-display">
               10-Minute Practice and SATIC Teachers' Talk topics are developed across these four focus areas, creating a balanced approach to continuous professional development.
             </p>
           </div>
