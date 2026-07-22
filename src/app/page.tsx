@@ -547,34 +547,29 @@ export default function HomePage() {
       </section>
 
       {/* 05 — SATIC TEACHERS' TALK */}
-      <section id="teachers-talk" className="px-6 py-10 md:py-12 bg-white border-b border-brand-border">
-        <div className="mx-auto max-w-7xl">
+      <section id="teachers-talk" className="px-6 py-8 lg:py-0 bg-white border-b border-brand-border lg:h-screen lg:min-h-[700px] lg:max-h-[950px] flex items-center relative overflow-hidden">
+        <div className="mx-auto max-w-7xl w-full flex flex-col justify-center py-4">
           
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 mb-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 mb-6">
 
             {/* Left Column: Heading and Description */}
-            <div className="w-full lg:w-[48%] space-y-6">
+            <div className="w-full lg:w-[48%] space-y-4">
               <div>
-                <h2 className="text-3xl md:text-5xl font-black font-display uppercase tracking-tight mb-3">
+                <h2 className="text-3xl md:text-4xl font-black font-display uppercase tracking-tight mb-2">
                   <span className="text-brand-primary">SΛTIC</span> <span className="text-brand-secondary font-semibold">Teachers' Talk</span>
                 </h2>
-                <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-brand-secondary font-display leading-[1.2]">
+                <h3 className="text-xl md:text-2xl font-extrabold tracking-tight text-brand-secondary font-display leading-[1.2]">
                   Learn Together. Discuss What Matters.
                 </h3>
               </div>
-              <div className="space-y-4">
-                <p className="text-base md:text-lg text-brand-text/80 leading-relaxed font-body">
-                  SATIC Teachers' Talk is the live learning component of the SATIC CPD experience.
-                </p>
-                <p className="text-sm md:text-base text-brand-text/70 leading-relaxed font-body">
-                  Teachers come together with speakers, experts and fellow educators to explore practical ideas, discuss professional challenges and discover approaches relevant to their professional lives.
-                </p>
-              </div>
+              <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed font-body">
+                SATIC Teachers' Talk is the live learning component of the SATIC CPD experience. Teachers come together with speakers, experts and fellow educators to explore practical ideas, discuss professional challenges and discover approaches relevant to their professional lives.
+              </p>
             </div>
 
             {/* Right Column: Seminar Picture */}
             <div className="w-full lg:w-[48%]">
-              <div className="relative aspect-square sm:aspect-[4/3] rounded-[1.75rem] overflow-hidden border border-brand-border shadow-2xl">
+              <div className="relative aspect-[21/9] sm:aspect-[3/1] lg:aspect-[3.2/1] rounded-2xl overflow-hidden border border-brand-border shadow-md">
                 <Image
                   src="/teachers-talk-online.png"
                   alt="Indian teacher attending live online CPD Teachers' Talk seminar"
@@ -588,23 +583,20 @@ export default function HomePage() {
           </div>
 
           {/* Topics We Explore List Layout */}
-          <div className="bg-[#FAF9F6]/40 border border-brand-border rounded-3xl p-6 md:p-8 shadow-xs mb-10">
-            <h3 className="text-xl font-bold text-brand-secondary uppercase tracking-wider mb-6 font-display text-center">Your Teachers' Talk Topics</h3>
-            <div className="max-w-4xl mx-auto divide-y divide-brand-border/60">
+          <div className="bg-[#FAF9F6]/40 border border-brand-border rounded-3xl p-4 md:p-5 shadow-xs mb-6">
+            <h3 className="text-xs font-bold text-brand-secondary uppercase tracking-widest mb-3 font-display text-center">Your Teachers' Talk Topics</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-2 max-w-5xl mx-auto">
               {[
-                { title: "AI Tools Every Teacher Should Know", desc: "Explore practical AI tools that can support everyday teaching and professional tasks." },
-                { title: "What Is STEM Education?", desc: "Understand STEM education and explore practical approaches to bringing it into learning experiences." },
-                { title: "Modern Classroom Management", desc: "Explore approaches to student engagement and effective classroom environments." },
-                { title: "Communicating Effectively With Parents", desc: "Build confidence in clear, constructive and professional parent communication." },
-                { title: "Teacher Productivity & Digital Tools", desc: "Discover tools and approaches that can help teachers work smarter." },
-                { title: "Career Growth for Teachers", desc: "Explore professional skills, development opportunities and pathways for continued career growth." }
+                "AI Tools Every Teacher Should Know",
+                "What Is STEM Education?",
+                "Modern Classroom Management",
+                "Communicating Effectively With Parents",
+                "Teacher Productivity & Digital Tools",
+                "Career Growth for Teachers"
               ].map((topic, i) => (
-                <div key={i} className="py-4.5 flex flex-col md:flex-row md:items-start gap-2 md:gap-8 hover:bg-brand-bg/25 px-4 rounded-xl transition-premium">
-                  <span className="text-xs font-bold text-brand-primary uppercase tracking-widest font-display shrink-0 w-24 pt-1">Topic {i+1}</span>
-                  <div className="font-body">
-                    <h4 className="font-bold text-brand-secondary text-sm md:text-base font-display">{topic.title}</h4>
-                    <p className="text-xs md:text-sm text-brand-text/75 leading-relaxed mt-0.5">{topic.desc}</p>
-                  </div>
+                <div key={i} className="flex items-center gap-2 py-1 px-2 hover:bg-brand-bg/25 rounded-lg transition-premium">
+                  <span className="text-[10px] font-bold text-brand-primary font-display">0{i+1}</span>
+                  <span className="text-xs md:text-sm font-semibold text-brand-secondary font-display leading-tight">{topic}</span>
                 </div>
               ))}
             </div>
@@ -612,18 +604,18 @@ export default function HomePage() {
 
           {/* Testimonials */}
           <div>
-            <h3 className="text-xl font-bold text-brand-secondary font-display text-center mb-6">What Teachers Say</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <h3 className="text-xs font-bold text-brand-secondary uppercase tracking-widest text-center mb-3 font-display">What Teachers Say</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
               {[
                 { quote: "Every Saturday session is a breath of fresh air. Discussing real classroom struggles with peer educators gives me practical solutions for Monday morning.", name: "Amit Sharma", detail: "Physics Teacher, Ahmedabad" },
                 { quote: "The 30-minute format is perfect. It's concise, high-impact, and directly focuses on what actually works in Indian classrooms.", name: "Priya Deshmukh", detail: "Primary Teacher, Surat" },
                 { quote: "Hearing different perspectives from teachers across India during the live talk has been immensely helpful for my classroom engagement.", name: "Ketan Mehta", detail: "Math Teacher, Rajkot" }
               ].map((t, i) => (
-                <div key={i} className="bg-white border border-brand-border rounded-2xl p-6 shadow-xs flex flex-col justify-between hover:shadow-md transition-premium">
-                  <p className="text-sm md:text-base text-brand-text/80 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
+                <div key={i} className="bg-white border border-brand-border rounded-xl p-4 shadow-xs flex flex-col justify-between hover:shadow-md transition-premium">
+                  <p className="text-[11px] md:text-xs text-brand-text/75 leading-relaxed italic font-body mb-2">&quot;{t.quote}&quot;</p>
                   <div>
-                    <h5 className="font-bold text-brand-secondary text-sm font-display">{t.name}</h5>
-                    <span className="text-xs text-brand-text/50 block font-body mt-0.5">{t.detail}</span>
+                    <h5 className="font-bold text-brand-secondary text-xs font-display">{t.name}</h5>
+                    <span className="text-[10px] text-brand-text/50 block font-body mt-0.5">{t.detail}</span>
                   </div>
                 </div>
               ))}
