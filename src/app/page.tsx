@@ -53,7 +53,7 @@ export default function HomePage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   const teacherCount = useCountUp(1000);
-  const schoolCount  = useCountUp(50);
+  const schoolCount = useCountUp(50);
 
   const toggleFaq = (index: number) => {
     setActiveFaq(activeFaq === index ? null : index);
@@ -326,7 +326,7 @@ export default function HomePage() {
                   Continuous Professional Development That Is Actually Continuous.
                 </h3>
               </div>
-              
+
               <div className="space-y-4 text-sm md:text-base text-brand-text/75 leading-relaxed font-body">
                 <p>Professional development shouldn't be limited to a one-day workshop or an occasional training session.</p>
                 <p>SATIC CPD is designed to keep teachers connected to professional learning through short, practical and consistent experiences that fit into their professional lives.</p>
@@ -344,7 +344,7 @@ export default function HomePage() {
 
             {/* Right Column: Circular Learning Cycle */}
             <div className="w-full lg:w-[55%] flex flex-col items-center">
-              
+
               {/* Desktop Circular Flow (Visible on Desktop) */}
               <div className="hidden lg:block relative w-[520px] h-[480px] shrink-0">
                 {/* Connecting Curved Arrow SVGs */}
@@ -355,7 +355,7 @@ export default function HomePage() {
                   <path d="M 340 405 Q 260 445 180 405" stroke="currentColor" strokeWidth="2" strokeDasharray="5 5" markerEnd="url(#arrow)" />
                   {/* Arrow from Monthly (Bottom-Left) to Daily (Top) */}
                   <path d="M 110 330 Q 70 160 190 90" stroke="currentColor" strokeWidth="2" strokeDasharray="5 5" markerEnd="url(#arrow)" />
-                  
+
                   {/* Arrowhead marker definition */}
                   <defs>
                     <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
@@ -411,7 +411,7 @@ export default function HomePage() {
               <div className="lg:hidden w-full space-y-6">
                 <div className="bg-brand-bg/60 border border-brand-border/60 rounded-3xl p-6 text-center shadow-xs">
                   <h4 className="text-base font-bold text-brand-secondary uppercase tracking-wider mb-4 font-display">The Continuous Learning Cycle</h4>
-                  
+
                   <div className="flex flex-col items-center space-y-6">
                     {[
                       { time: "DAILY", title: "10-Minute Practice", desc: "Short, practical activities. Monday–Friday", icon: Clock },
@@ -431,7 +431,7 @@ export default function HomePage() {
                       );
                     })}
                   </div>
-                  
+
                   <div className="mt-6 inline-flex flex-col items-center justify-center gap-1 bg-[#FAF9F6] border border-brand-primary/10 px-6 py-4 rounded-2xl shadow-sm w-full">
                     <div className="text-[10px] font-bold text-brand-secondary uppercase tracking-wider leading-relaxed">
                       Learn &rarr; Practise &rarr; Apply &rarr; Reflect &rarr; Grow &rarr; Repeat
@@ -448,20 +448,20 @@ export default function HomePage() {
       </section>
 
       {/* 04 — 10-MINUTE PRACTICE */}
-      <section id="practice" className="px-6 py-12 md:py-16 bg-brand-secondary text-white border-b border-brand-border relative overflow-hidden">
+      <section id="practice" className="px-6 py-8 md:py-10 bg-brand-secondary text-white border-b border-brand-border relative overflow-hidden">
         {/* Subtle background decorative shapes */}
         <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
         <div className="absolute -bottom-24 -left-24 h-48 w-48 rounded-full bg-white/5 pointer-events-none"></div>
 
         <div className="mx-auto max-w-7xl relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 mb-16">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 mb-10">
 
             {/* Left Column: Heading and 4 Steps */}
             <div className="w-full lg:w-[48%] space-y-8">
               <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white font-display leading-[1.15]">
                 <span className="text-brand-accent">10 Minutes.</span> One Practical Step Forward.
               </h2>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { step: "01", title: "Receive", desc: "Get your practice activity." },
@@ -496,8 +496,8 @@ export default function HomePage() {
           </div>
 
           {/* What Can Teachers Practise Section */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white font-display text-center mb-8">Monthly practice topics</h3>
+          <div className="mb-10">
+            <h3 className="text-2xl font-bold text-white font-display text-center mb-6">Monthly practice topics</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
                 { title: "AI Tools Practice", desc: "Use AI tools for lesson planning, content creation and everyday professional tasks.", icon: Sparkles },
@@ -525,12 +525,12 @@ export default function HomePage() {
 
           {/* Testimonials */}
           <div>
-            <h3 className="text-2xl font-bold text-white font-display text-center mb-8">What Teachers Say</h3>
+            <h3 className="text-2xl font-bold text-white font-display text-center mb-6">What Teachers Say</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
-                { quote: "The daily 10-minute activities are incredibly practical. I can complete them during my free period, and the feedback from mentors helps me refine my teaching methods immediately.", name: "Meera Sen", school: "Middle School Science Teacher, Delhi Public School" },
-                { quote: "SATIC CPD has transformed how I plan my lessons. Learning to use AI tools step-by-step has saved me hours of administrative work every week.", name: "Rajesh Nair", school: "Secondary Math Teacher, Chinmaya Vidyalaya" },
-                { quote: "It's the first professional development program that doesn't feel like a chore. The bite-sized daily practices fit perfectly into my busy schedule.", name: "Kavita Rao", school: "English Teacher, Bishop Cotton School" }
+                { quote: "The daily 10-minute activities are incredibly practical. I can complete them during my free period, and the feedback from mentors helps me refine my teaching methods immediately.", name: "Meera Sen", school: "Science Teacher, Ahmedabad" },
+                { quote: "SATIC CPD has transformed how I plan my lessons. Learning to use AI tools step-by-step has saved me hours of administrative work every week.", name: "Rajesh Nair", school: "Math Teacher, Surat" },
+                { quote: "It's the first professional development program that doesn't feel like a chore. The bite-sized daily practices fit perfectly into my busy schedule.", name: "Kavita Rao", school: "English Teacher, Rajkot" }
               ].map((t, i) => (
                 <div key={i} className="bg-brand-bg border border-brand-border/60 rounded-2xl p-6 shadow-sm flex flex-col justify-between hover:-translate-y-1 hover:shadow-md transition-premium text-brand-text">
                   <p className="text-sm md:text-base text-brand-text/80 leading-relaxed italic font-body mb-4">&quot;{t.quote}&quot;</p>
@@ -692,7 +692,7 @@ export default function HomePage() {
           {/* Centered Pricing Card */}
           <div className="max-w-md mx-auto bg-brand-secondary text-white border-transparent rounded-3xl p-8 shadow-md flex flex-col justify-between space-y-6 relative overflow-hidden">
             <div className="absolute -top-10 -left-10 h-32 w-32 rounded-full bg-brand-primary opacity-25"></div>
-            
+
             <div className="text-center relative z-10">
               <span className="bg-white/10 text-brand-accent text-[10px] font-extrabold tracking-wider uppercase px-2.5 py-1 rounded-full font-display">
                 ANNUAL INDIVIDUAL PLAN
