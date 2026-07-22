@@ -570,14 +570,14 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Right Column: Seminar Picture (Full 4/3 View) */}
+              {/* Right Column: Seminar Picture (Full Square View - Unclipped) */}
               <div className="w-full lg:w-[48%] flex justify-center">
-                <div className="relative aspect-[4/3] w-full max-h-[340px] md:max-h-[380px] lg:max-h-[420px] rounded-[1.75rem] overflow-hidden border border-brand-border shadow-lg">
+                <div className="relative aspect-square w-full max-w-[340px] md:max-w-[380px] lg:max-w-[400px] rounded-[1.75rem] overflow-hidden border border-brand-border shadow-lg">
                   <Image
                     src="/teachers-talk-online.png"
                     alt="Indian teacher attending live online CPD Teachers' Talk seminar"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center rounded-[1.75rem]"
                     sizes="(max-width: 1024px) 100vw, 48vw"
                   />
                 </div>
