@@ -632,40 +632,104 @@ export default function HomePage() {
       </section>
 
       {/* 06 — SATIC CPD FOCUS AREAS */}
-      <section id="focus-areas" className="px-6 py-16 md:py-24 bg-[#FAF9F6]/40 border-b border-brand-border">
+      <section id="focus-areas" className="px-6 py-10 md:py-12 bg-[#FAF9F6]/40 border-b border-brand-border">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl mb-16 space-y-4">
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-primary font-display">SATIC CPD Focus Areas</span>
-            <span className="text-xs font-bold uppercase tracking-widest text-brand-primary/65 block font-display">OUR CPD FRAMEWORK</span>
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-brand-secondary font-display">
-              Built Around a Teacher's Professional Life.
-            </h2>
-            <p className="text-lg md:text-xl text-brand-text/75 leading-relaxed font-body">
-              SATIC CPD focuses on four areas that influence a teacher's effectiveness in the classroom, relationships within the school community, everyday productivity and long-term professional growth.
-            </p>
+          
+          {/* Header Block */}
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 mb-10">
+            <div className="w-full lg:w-[72%] space-y-3">
+              <h2 className="text-3xl md:text-5xl font-black font-display uppercase tracking-tight text-brand-accent">
+                SΛTIC CPD Focus Areas
+              </h2>
+              <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-brand-secondary font-display leading-[1.2]">
+                Built Around a Teacher's Professional Life.
+              </h3>
+              <p className="text-sm md:text-base text-brand-text/75 leading-relaxed font-body">
+                SATIC CPD focuses on four areas that influence a teacher's effectiveness in the classroom, relationships within the school community, everyday productivity and long-term professional growth.
+              </p>
+            </div>
+            
+            {/* Focus/Target Graphic (Dart board) */}
+            <div className="w-full lg:w-[24%] flex justify-center lg:justify-end">
+              <div className="relative flex items-center justify-center w-24 h-24 md:w-28 md:h-28 bg-brand-primary/5 rounded-3xl border border-brand-primary/10 shadow-sm p-4 text-brand-primary">
+                <svg viewBox="0 0 100 100" className="w-full h-full">
+                  <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" strokeWidth="3.5" />
+                  <circle cx="50" cy="50" r="32" fill="none" stroke="currentColor" strokeWidth="2.5" strokeDasharray="3 3" />
+                  <circle cx="50" cy="50" r="20" fill="none" stroke="#F4B400" strokeWidth="3" />
+                  <circle cx="50" cy="50" r="8" fill="currentColor" />
+                  <path d="M 82 18 L 54 46" stroke="#F4B400" strokeWidth="4.5" strokeLinecap="round" />
+                  <path d="M 78 14 L 86 14 L 86 22 Z" fill="#F4B400" />
+                  <path d="M 76 18 L 82 12 L 80 10 Z" fill="currentColor" />
+                </svg>
+              </div>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             {[
-              { id: "01", area: "Classroom Management", desc: "Building effective, engaging and positive learning environments.", bullets: ["Student Engagement", "Classroom Communication", "Teaching Practices", "Activity-Based Learning", "Assessment & Feedback", "Managing Classroom Challenges"] },
-              { id: "02", area: "Parent Engagement", desc: "Building stronger and more professional relationships between teachers and parents.", bullets: ["Effective Parent Communication", "Parent-Teacher Meetings", "Communicating Student Progress", "Managing Expectations", "Difficult Conversations", "Building Parent Partnerships"] },
-              { id: "03", area: "Teacher Productivity", desc: "Helping teachers use their time, tools and technology more effectively.", bullets: ["AI Tools for Teachers", "Digital Teaching Tools", "Lesson & Content Planning", "Time Management", "Smarter Professional Workflows", "Personal Organisation"] },
-              { id: "04", area: "Career Development", desc: "Supporting teachers in their continued professional and career growth.", bullets: ["Professional Skills", "Communication Skills", "Leadership Development", "Continuous Learning", "Career Opportunities", "Building a Professional Profile"] }
+              { 
+                id: "01", 
+                area: "Classroom Management", 
+                desc: "Building effective, engaging and positive learning environments.", 
+                bullets: ["Student Engagement", "Classroom Communication", "Teaching Practices", "Activity-Based Learning", "Assessment & Feedback", "Managing Classroom Challenges"],
+                bgClass: "bg-[#EAF7EE] border-[#C8EAD1] text-[#1E4E2C]",
+                subText: "text-[#1E4E2C]/75",
+                bulletText: "text-[#1E4E2C]/90",
+                numberText: "text-[#1E4E2C]",
+                tagText: "text-[#1E4E2C]/70",
+                iconColor: "#1E4E2C"
+              },
+              { 
+                id: "02", 
+                area: "Parent Engagement", 
+                desc: "Building stronger and more professional relationships between teachers and parents.", 
+                bullets: ["Effective Parent Communication", "Parent-Teacher Meetings", "Communicating Student Progress", "Managing Expectations", "Difficult Conversations", "Building Parent Partnerships"],
+                bgClass: "bg-[#FFF9E6] border-[#FCE395] text-[#6D5000]",
+                subText: "text-[#6D5000]/75",
+                bulletText: "text-[#6D5000]/90",
+                numberText: "text-[#6D5000]",
+                tagText: "text-[#6D5000]/70",
+                iconColor: "#6D5000"
+              },
+              { 
+                id: "03", 
+                area: "Teacher Productivity", 
+                desc: "Helping teachers use their time, tools and technology more effectively.", 
+                bullets: ["AI Tools for Teachers", "Digital Teaching Tools", "Lesson & Content Planning", "Time Management", "Smarter Professional Workflows", "Personal Organisation"],
+                bgClass: "bg-[#EBF1FF] border-[#C7D7F7] text-[#123A8F]",
+                subText: "text-[#123A8F]/75",
+                bulletText: "text-[#123A8F]/90",
+                numberText: "text-[#123A8F]",
+                tagText: "text-[#123A8F]/70",
+                iconColor: "#123A8F"
+              },
+              { 
+                id: "04", 
+                area: "Career Development", 
+                desc: "Supporting teachers in their continued professional and career growth.", 
+                bullets: ["Professional Skills", "Communication Skills", "Leadership Development", "Continuous Learning", "Career Opportunities", "Building a Professional Profile"],
+                bgClass: "bg-[#F5EFFF] border-[#DFD3F7] text-[#4A1E8F]",
+                subText: "text-[#4A1E8F]/75",
+                bulletText: "text-[#4A1E8F]/90",
+                numberText: "text-[#4A1E8F]",
+                tagText: "text-[#4A1E8F]/70",
+                iconColor: "#4A1E8F"
+              }
             ].map((focus, i) => (
-              <div key={i} className="bg-white border border-brand-border rounded-2xl p-6 md:p-8 shadow-xs flex flex-col justify-between">
+              <div key={i} className={`${focus.bgClass} border rounded-2xl p-6 md:p-8 shadow-xs flex flex-col justify-between hover:scale-[1.02] transition-premium`}>
                 <div>
                   <div className="flex justify-between items-center mb-4">
-                    <span className="text-[10px] font-bold tracking-widest text-brand-primary uppercase">Focus Area {focus.id}</span>
-                    <span className="text-xl font-black text-brand-accent font-display">{focus.id}</span>
+                    <span className={`text-[10px] font-bold tracking-widest ${focus.tagText} uppercase`}>Focus Area {focus.id}</span>
+                    <span className={`text-xl font-black font-display ${focus.numberText}`}>{focus.id}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-brand-secondary font-display mb-2">{focus.area}</h3>
-                  <p className="text-sm md:text-base text-brand-text/75 font-body leading-relaxed mb-6">{focus.desc}</p>
+                  <h3 className="text-xl font-bold font-display mb-2">{focus.area}</h3>
+                  <p className={`text-sm md:text-base ${focus.subText} font-body leading-relaxed mb-6`}>{focus.desc}</p>
 
-                  <div className="grid grid-cols-2 gap-3 border-t border-brand-border/60 pt-5 font-body text-sm text-brand-text/90 font-medium">
+                  <div className="grid grid-cols-2 gap-3 border-t border-black/10 pt-5 font-body text-xs md:text-sm font-medium">
                     {focus.bullets.map((bullet, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
-                        <CheckCircle2 size={14} className="text-brand-primary shrink-0" />
-                        <span>{bullet}</span>
+                        <CheckCircle2 size={14} className="shrink-0" style={{ color: focus.iconColor }} />
+                        <span className={focus.bulletText}>{bullet}</span>
                       </div>
                     ))}
                   </div>
